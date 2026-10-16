@@ -9,8 +9,7 @@ const PROVIDER_URL = 'https://formsubmit.co/ajax/3537213006@qq.com';
 let workerScript;
 
 before(async () => {
-  // Bundle the real default Worker handler, preserving its runtime fetch options.
-  // A Node-only injected fetch would miss workerd rejecting redirect: "error".
+  // Exercise the actual default Worker and bindings in workerd, not a Node mock.
   const result = await build({
     entryPoints: [fileURLToPath(new URL('../worker.mjs', import.meta.url))],
     bundle: true,
@@ -21,7 +20,7 @@ before(async () => {
   workerScript = result.outputFiles[0].text;
 });
 
-async function runtime(t, provider, rateLimit = 5) {
+async function runtime(t, rateLimit = 5) {
   const calls = [];
   const mf = new Miniflare(convertV4MiniflareOptions({
     modules: true,
@@ -36,18 +35,11 @@ async function runtime(t, provider, rateLimit = 5) {
         simple: { limit: rateLimit, period: 60 },
       },
     },
-    // Intercept EVERY outbound fetch. There is deliberately no network fallback:
-    // these tests must never reach FormSubmit or send an email.
+    // Preparation must not contact the provider. Intercept and reject EVERY
+    // outbound fetch, with no network fallback and no possibility of email.
     outboundService: async (request) => {
-      const call = {
-        url: request.url,
-        method: request.method,
-        payload: null,
-      };
-      calls.push(call);
-      const text = await request.text();
-      if (text) call.payload = JSON.parse(text);
-      return provider(call, calls.length);
+      calls.push({ url: request.url, method: request.method });
+      throw new Error('Unexpected outbound request during enquiry preparation');
     },
   }));
   t.after(() => mf.dispose());
@@ -71,41 +63,31 @@ function submit(mf) {
   });
 }
 
-test('real workerd handler accepts a mocked provider response', async (t) => {
-  const { mf, calls } = await runtime(t, () => Response.json({ success: true }));
+test('real workerd handler prepares browser delivery without contacting a provider', async (t) => {
+  const { mf, calls } = await runtime(t);
   const response = await submit(mf);
   const body = await response.json();
-  assert.equal(response.status, 202);
-  assert.equal(body.status, 'accepted');
+  assert.equal(response.status, 200);
+  assert.equal(body.status, 'ready');
   assert.equal(body.ok, true);
-  assert.equal(calls.length, 1);
-  assert.equal(calls[0].url, PROVIDER_URL);
-  assert.equal(calls[0].method, 'POST');
-  assert.equal(calls[0].payload.Reference, body.reference);
+  assert.match(body.reference, /^CL-[0-9A-F]{8}$/);
+  assert.equal(body.delivery.url, PROVIDER_URL);
+  assert.equal(body.delivery.payload.Reference, body.reference);
+  assert.equal(body.delivery.payload.name, 'Local Runtime Test');
+  assert.equal(body.delivery.payload.email, 'runtime-test@example.invalid');
+  assert.equal(body.delivery.payload._url, `${ORIGIN}/contact`);
+  assert.equal(response.headers.get('Cache-Control'), 'no-store');
+  assert.equal(calls.length, 0);
 });
 
-test('real workerd handler rejects a provider redirect without following it', async (t) => {
-  const { mf, calls } = await runtime(t, (_call, count) => count === 1
-    ? new Response(null, {
-      status: 302,
-      headers: { Location: 'https://must-not-be-followed.invalid/' },
-    })
-    : Response.json({ success: true }));
-  const response = await submit(mf);
-  assert.equal(response.status, 502);
-  assert.equal((await response.json()).code, 'delivery_unconfirmed');
-  assert.equal(calls.length, 1);
-  assert.equal(calls[0].url, PROVIDER_URL);
-});
-
-test('real runtime rate limiter stops a second attempt before the provider', async (t) => {
-  const { mf, calls } = await runtime(t, () => Response.json({ success: true }), 1);
+test('real runtime rate limiter rejects a second preparation with no outbound requests', async (t) => {
+  const { mf, calls } = await runtime(t, 1);
   const first = await submit(mf);
-  assert.equal(first.status, 202);
+  assert.equal(first.status, 200);
   await first.text();
   const second = await submit(mf);
   assert.equal(second.status, 429);
   assert.equal(second.headers.get('Retry-After'), '60');
   assert.equal((await second.json()).code, 'rate_limited');
-  assert.equal(calls.length, 1);
+  assert.equal(calls.length, 0);
 });

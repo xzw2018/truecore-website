@@ -67,7 +67,7 @@ export function validateEnquiry(input) {
   return { data, errors };
 }
 
-export async function handleEnquiry(request, env, fetchEmail = fetch) {
+export async function handleEnquiry(request, env) {
   if (request.method !== 'POST') return failure('method_not_allowed', 'Use POST to submit an enquiry.', 405, { Allow: 'POST' });
   const expectedOrigin = env.PUBLIC_SITE_ORIGIN;
   if (!expectedOrigin || new URL(request.url).origin !== expectedOrigin || request.headers.get('Origin') !== expectedOrigin) {
@@ -114,47 +114,15 @@ export async function handleEnquiry(request, env, fetchEmail = fetch) {
     payload.Quantity = data.quantity;
     if (data.timeline) payload['Target delivery'] = data.timeline;
   }
-  try {
-    const upstream = await fetchEmail(DELIVERY_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: expectedOrigin, Referer: `${expectedOrigin}/contact` },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(18000),
-      // workerd supports manual/follow only; reject redirects without forwarding enquiry data.
-      redirect: 'manual',
-    });
-    if (!upstream.ok) return failure('delivery_unconfirmed', 'Email submission could not be confirmed. Keep your enquiry copy and contact us directly.', 502);
-    let receipt;
-    try { receipt = await upstream.json(); }
-    catch { return failure('delivery_unconfirmed', 'Email submission could not be confirmed. Keep your enquiry copy and contact us directly.', 502); }
-    if (typeof receipt?.message === 'string' && /needs? activation|activate (?:your |the )?form|confirm (?:your )?email/i.test(receipt.message)) {
-      return failure('activation_required', 'Online email delivery is awaiting activation. Please email your enquiry directly to 3537213006@qq.com.', 503);
-    }
-    if (receipt?.success === false || receipt?.success === 'false') {
-      return failure('delivery_failed', 'The email service did not accept your enquiry. Please keep a copy or contact us directly.', 502);
-    }
-    if (receipt?.success !== true && receipt?.success !== 'true') {
-      return failure('delivery_unconfirmed', 'Email submission could not be confirmed. Keep your enquiry copy and contact us directly.', 502);
-    }
-    // Acceptance is not an inbox delivery receipt. Do not promise delivery or send auto-replies.
-    return json({ ok: true, status: 'accepted', reference }, 202);
-  } catch {
-    return failure('delivery_unconfirmed', 'Email submission could not be confirmed. Keep your enquiry copy and contact us directly.', 504);
-  }
+  // FormSubmit's public AJAX API is sent from the visitor's browser. Forwarding
+  // all enquiries through a shared Cloudflare egress IP hits provider rate limits.
+  // Preparation alone never sends mail and must never be presented as acceptance.
+  return json({ ok: true, status: 'ready', reference, delivery: { url: DELIVERY_URL, payload } });
 }
 
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
-    // Temporary connectivity probe uses an invalid recipient and a filled spam trap.
-    if (path === '/api/email-health' && request.method === 'GET') {
-      const response = await fetch('https://formsubmit.co/ajax/not-an-email', {
-        method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(10000),
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: env.PUBLIC_SITE_ORIGIN, Referer: `${env.PUBLIC_SITE_ORIGIN}/contact` },
-        body: JSON.stringify({ _honey: 'diagnostic', _url: `${env.PUBLIC_SITE_ORIGIN}/contact` }),
-      });
-      return json({ status: response.status, contentType: response.headers.get('content-type'), location: response.headers.get('location'), body: (await response.text()).slice(0, 1500) });
-    }
     if (path === '/api/enquiry') return handleEnquiry(request, env);
     if (path.startsWith('/api/')) return failure('not_found', 'Not found.', 404);
     return env.ASSETS.fetch(request);

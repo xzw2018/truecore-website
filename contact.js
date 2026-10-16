@@ -41,6 +41,7 @@
   let unknownProduct = false;
   let sending = false;
   const submissionOutcomes = new Map();
+  const deliveryURL = "https://formsubmit.co/ajax/3537213006@qq.com";
 
   Object.entries(window.CL_CATEGORIES || {}).filter(([key]) => key !== 'all').forEach(([category,label]) => {
     const group = document.createElement('optgroup'); group.label = label;
@@ -296,6 +297,16 @@
     showResult("unconfirmed", "Submission status unknown", "We could not confirm whether your enquiry was accepted. Your details are preserved below. Contact 3537213006@qq.com to check before sending again.", "No automatic retry was made. Repeating this enquiry could send a duplicate.");
   }
 
+  function showRateLimit(response) {
+    const seconds = Number(response.headers.get("Retry-After"));
+    const wait = Number.isInteger(seconds) && seconds > 0 && seconds <= 3600 ? `Wait ${seconds} seconds before trying again.` : "Wait a few minutes before trying again.";
+    showResult("error", "Please wait before sending", `${wait} Your enquiry is preserved below.`, "This attempt was not sent. You can also email 3537213006@qq.com.");
+  }
+
+  function showPreparationFailure() {
+    showResult("error", "Enquiry not sent", "We could not prepare your enquiry for email delivery. Try again, or email 3537213006@qq.com.", "This attempt was not sent to the email service. Your details are preserved below.");
+  }
+
   function applyServerErrors(errors) {
     const messages = {
       type: "Choose an enquiry type.", product: "Select a product from the list or leave it blank.",
@@ -333,7 +344,9 @@
     syncSubmitButton();
     showResult("sending", "Sending your enquiry", "Please keep this page open while we request email delivery.", "Awaiting confirmation from the email service.");
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 25000);
+    const timeout = setTimeout(() => controller.abort(), 35000);
+    let deliveryTimeout;
+    let deliveryStarted = false;
     let errorField;
     try {
       const response = await fetch("/api/enquiry", {
@@ -341,20 +354,45 @@
         credentials: "same-origin", body: JSON.stringify(data), signal: controller.signal
       });
       const body = await response.json().catch(() => null);
-      if (response.status === 202 && body?.ok === true && body.status === "accepted") {
-        submissionOutcomes.set(key, "accepted");
-        const reference = typeof body.reference === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(body.reference) ? ` Reference: ${body.reference}.` : "";
-        showResult("accepted", "Enquiry submitted", "Your enquiry has been accepted for email delivery to chenglian. Keep the copy below for your records.", `Accepted for email delivery; inbox receipt is not confirmed.${reference} This enquiry is not an order.`);
-      } else if (response.status === 503 && body?.code === "activation_required") {
-        submissionOutcomes.set(key, "activation");
-        showResult("activation", "Email setup pending", "The email service is awaiting activation and may retain your enquiry until setup is complete. Contact 3537213006@qq.com to check its status before sending again.", "Email delivery is not confirmed. Your details are preserved below; no automatic retry was made.");
+      if (response.status === 200 && body?.ok === true && body.status === "ready") {
+        const payload = body.delivery?.payload;
+        if (body.delivery?.url !== deliveryURL || !payload || typeof payload !== "object" || Array.isArray(payload)) {
+          showPreparationFailure();
+          return;
+        }
+        // The same-origin endpoint only prepares the enquiry. The browser sends the validated payload directly.
+        deliveryTimeout = setTimeout(() => controller.abort(), 18000);
+        deliveryStarted = true;
+        const delivery = await fetch(deliveryURL, {
+          method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          credentials: "omit", body: JSON.stringify(payload), signal: controller.signal, redirect: "error"
+        });
+        if (delivery.status === 429) {
+          showRateLimit(delivery);
+          return;
+        }
+        if (!delivery.ok) {
+          showUnconfirmed(key);
+          return;
+        }
+        const receipt = await delivery.json().catch(() => null);
+        if (typeof receipt?.message === "string" && /needs? activation|activate (?:your |the )?form|confirm (?:your )?email/i.test(receipt.message)) {
+          submissionOutcomes.set(key, "activation");
+          showResult("activation", "Email setup pending", "The email service is awaiting activation and may retain your enquiry until setup is complete. Contact 3537213006@qq.com to check its status before sending again.", "Email delivery is not confirmed. Your details are preserved below; no automatic retry was made.");
+        } else if (receipt?.success === true || receipt?.success === "true") {
+          submissionOutcomes.set(key, "accepted");
+          const reference = typeof body.reference === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(body.reference) ? ` Reference: ${body.reference}.` : "";
+          showResult("accepted", "Enquiry submitted", "Your enquiry has been accepted for email delivery to chenglian. Keep the copy below for your records.", `Accepted for email delivery; inbox receipt is not confirmed.${reference} This enquiry is not an order.`);
+        } else if (receipt?.success === false || receipt?.success === "false") {
+          showResult("error", "Email submission failed", "Your enquiry could not be accepted for email delivery. Try again later, or email 3537213006@qq.com.", "Your details are preserved below. Copy or download your enquiry to send by email.");
+        } else {
+          showUnconfirmed(key);
+        }
       } else if (response.status === 422 && body?.code === "validation_error") {
         errorField = applyServerErrors(body.errors);
         showResult("error", "Check your enquiry", "Some details need attention. Review the highlighted fields and send again.", "Your enquiry has not been sent. Your details are preserved below.");
       } else if (response.status === 429) {
-        const seconds = Number(response.headers.get("Retry-After"));
-        const wait = Number.isInteger(seconds) && seconds > 0 && seconds <= 3600 ? `Wait ${seconds} seconds before trying again.` : "Wait a few minutes before trying again.";
-        showResult("error", "Please wait before sending", `${wait} Your enquiry is preserved below.`, "This attempt was not sent. You can also email 3537213006@qq.com.");
+        showRateLimit(response);
       } else if (["service_unavailable", "origin_not_allowed", "unsupported_content_type", "payload_too_large", "invalid_json", "invalid_submission"].includes(body?.code)) {
         const message = body.code === "service_unavailable"
           ? "Email submission is temporarily unavailable. Try again later, or email 3537213006@qq.com."
@@ -362,15 +400,15 @@
             ? "Your enquiry exceeds the submission limit. Shorten your requirements and try again, or email 3537213006@qq.com."
             : "We could not process this submission. Review your details and try again, or email 3537213006@qq.com.";
         showResult("error", "Enquiry not sent", message, "This attempt was not sent to the email service. Your details are preserved below.");
-      } else if (body?.code === "delivery_failed") {
-        showResult("error", "Email submission failed", "Your enquiry could not be accepted for email delivery. Try again later, or email 3537213006@qq.com.", "Your details are preserved below. Copy or download your enquiry to send by email.");
       } else {
-        showUnconfirmed(key);
+        showPreparationFailure();
       }
     } catch {
-      showUnconfirmed(key);
+      if (deliveryStarted) showUnconfirmed(key);
+      else showPreparationFailure();
     } finally {
       clearTimeout(timeout);
+      clearTimeout(deliveryTimeout);
       controlStates.forEach(([control, disabled]) => { control.disabled = disabled; });
       sending = false;
       form.removeAttribute("aria-busy");

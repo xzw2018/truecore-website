@@ -41,12 +41,12 @@ The dashboard may also use `npm run build` as an explicit build command; Wrangle
 
 ## Enquiry email delivery
 
-The contact form posts to the same-origin `/api/enquiry` Worker endpoint. It forwards validated enquiries to **3537213006@qq.com** using FormSubmit. The recipient must click the initial **Activate Form** message in that inbox before delivery works. No mailbox password or API token is stored in this repository.
+The contact form first posts to the same-origin `/api/enquiry` Worker endpoint for validation and payload preparation. The browser then sends the prepared payload directly to FormSubmit's public AJAX endpoint for **3537213006@qq.com**. This uses the provider's documented browser flow and avoids its rate limit on Cloudflare's shared outbound IPs. The recipient must click the initial **Activate Form** message in that inbox before delivery works. No mailbox password or API token is stored in this repository.
 
-- The server fixes the destination, source URL and email subject; submitted data cannot add recipients or webhooks.
+- The server fixes the prepared destination, source URL and email subject; submitted fields cannot add recipients or webhooks. The browser checks the fixed destination before sending.
 - Requests require the configured origin, JSON content type and consent. Fields, products and the 16 KB body limit are checked on the server.
-- A honeypot and a Cloudflare rate limit of five attempts per minute per IP and Cloudflare location reduce automated submissions. Users sharing a network share that allowance.
-- A successful response means the email service accepted the enquiry; it does not prove delivery to the inbox. There are no automatic retries or customer auto-replies.
+- A honeypot and a Cloudflare rate limit of five preparations per minute per IP and Cloudflare location protect the website endpoint. Users sharing a network share that allowance. FormSubmit's public endpoint has its own controls; website validation cannot prevent requests made directly to that service.
+- The Worker returns `ready` without sending any email. The browser shows success only after FormSubmit explicitly accepts the enquiry; that acknowledgement does not prove delivery to the inbox. There are no automatic retries or customer auto-replies.
 - On failure, activation pending or an uncertain result, the form preserves a copy for download and direct email.
 - FormSubmit handles email delivery and retains submissions for 30 days under its [published policy](https://formsubmit.co/documentation). Avoid including passwords or other secrets in enquiries.
 
