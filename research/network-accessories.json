@@ -1,0 +1,249 @@
+[
+  {
+    "id": "mikrotik-s-85dlc03d",
+    "model": "S+85DLC03D",
+    "subtype": "transceiver",
+    "sourceUrl": "https://mikrotik.com/product/Splus85DLC03D",
+    "badge": "10G multimode optics",
+    "description": "850 nm multimode SFP+ transceiver with duplex LC UPC connectors, supporting 1/10 Gb/s links up to 300 m.",
+    "scenario": "Short multimode fiber links in server rooms. Check device compatibility, fiber type, and the optical power budget at both ends.",
+    "specs": [
+      [
+        "Form factor",
+        "SFP+"
+      ],
+      [
+        "Connector",
+        "Duplex LC UPC"
+      ],
+      [
+        "Data rate",
+        "1 / 10 Gb/s"
+      ],
+      [
+        "Wavelength",
+        "850 nm"
+      ],
+      [
+        "Fiber type",
+        "Multimode (MM)"
+      ],
+      [
+        "Reach",
+        "Up to 300 m"
+      ],
+      [
+        "Tested ambient temperature",
+        "-40 to +70 °C"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "SFP+",
+      "850nm",
+      "Multimode",
+      "Optical transceiver",
+      "300m"
+    ],
+    "name": "MikroTik S+85DLC03D",
+    "brand": "MikroTik",
+    "category": "accessory",
+    "categoryLabel": "Components · Optical transceivers",
+    "price": null,
+    "image": "assets/products/accessory-network-mikrotik-s-85dlc03d.png",
+    "imageAlt": "MikroTik S+85DLC03D optical transceiver",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/813_hi_res.png",
+    "imageNote": "Official MikroTik S+85DLC03D product image. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceTitle": "MikroTik · S+85DLC03D",
+    "verifiedAt": "2026-10-16",
+    "featured": false,
+    "colors": [],
+    "newRank": 4,
+    "compatibilityNote": "Check the exact switch model, firmware, and port mode against the manufacturer compatibility list. Matching form factors and speeds alone do not establish compatibility."
+  },
+  {
+    "id": "mikrotik-s-31dlc10d",
+    "model": "S+31DLC10D",
+    "subtype": "transceiver",
+    "sourceUrl": "https://mikrotik.com/product/s_31dlc10d",
+    "badge": "10G single-mode optics",
+    "description": "1310 nm single-mode SFP+ transceiver with duplex LC connectors and digital diagnostics, supporting 1/10 Gb/s links up to 10 km.",
+    "scenario": "Single-mode links between buildings or across campuses. Check device compatibility, fiber specifications, and the optical power budget.",
+    "specs": [
+      [
+        "Form factor",
+        "SFP+"
+      ],
+      [
+        "Connector",
+        "Duplex LC, full duplex"
+      ],
+      [
+        "Data rate",
+        "1 / 10 Gb/s"
+      ],
+      [
+        "Wavelength",
+        "1310 nm"
+      ],
+      [
+        "Fiber type",
+        "Single-mode (SM)"
+      ],
+      [
+        "Reach",
+        "Up to 10 km"
+      ],
+      [
+        "Digital diagnostics",
+        "DDM: optical power, voltage, temperature, and laser bias current"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "SFP+",
+      "1310nm",
+      "Single-mode",
+      "Optical transceiver",
+      "10km",
+      "DDM"
+    ],
+    "name": "MikroTik S+31DLC10D",
+    "brand": "MikroTik",
+    "category": "accessory",
+    "categoryLabel": "Components · Optical transceivers",
+    "price": null,
+    "image": "assets/products/accessory-network-mikrotik-s-31dlc10d.png",
+    "imageAlt": "MikroTik S+31DLC10D optical transceiver",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/2514_hi_res.png",
+    "imageNote": "Official MikroTik S+31DLC10D product image. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceTitle": "MikroTik · S+31DLC10D",
+    "verifiedAt": "2026-10-16",
+    "featured": false,
+    "colors": [],
+    "newRank": 3,
+    "compatibilityNote": "Check the exact switch model, firmware, and port mode against the manufacturer compatibility list. Matching form factors and speeds alone do not establish compatibility."
+  },
+  {
+    "id": "mikrotik-s-da0001",
+    "model": "S+DA0001",
+    "subtype": "cable",
+    "sourceUrl": "https://mikrotik.com/product/SplusDA0001",
+    "badge": "10G DAC · Discontinued",
+    "lifecycle": "discontinued",
+    "description": "1 m SFP+ direct-attach copper cable for 1/10 Gb/s links; discontinued by MikroTik and listed for legacy system maintenance.",
+    "scenario": "Maintenance of existing SFP+ systems. Confirm remaining availability and DAC support at both endpoints.",
+    "specs": [
+      [
+        "Connector",
+        "SFP+ to SFP+"
+      ],
+      [
+        "Cable type",
+        "Direct-attach copper (DAC)"
+      ],
+      [
+        "Data rate",
+        "1 / 10 Gb/s"
+      ],
+      [
+        "Cable length",
+        "1 m"
+      ],
+      [
+        "Compliance",
+        "SFP+ MSA-compliant"
+      ],
+      [
+        "Product status",
+        "Discontinued by manufacturer; maintenance reference"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "SFP+",
+      "DAC",
+      "Direct attach copper",
+      "1m",
+      "Discontinued maintenance"
+    ],
+    "name": "MikroTik S+DA0001",
+    "brand": "MikroTik",
+    "category": "accessory",
+    "categoryLabel": "Components · Direct-attach cables",
+    "price": null,
+    "image": "assets/products/accessory-network-mikrotik-s-da0001.png",
+    "imageAlt": "MikroTik S+DA0001 direct-attach cable",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/863_hi_res.png",
+    "imageNote": "Official MikroTik S+DA0001 product image. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceTitle": "MikroTik · S+DA0001",
+    "verifiedAt": "2026-10-16",
+    "featured": false,
+    "colors": [],
+    "newRank": 2,
+    "compatibilityNote": "Check the exact switch model, firmware, and port mode against the manufacturer compatibility list. Matching form factors and speeds alone do not establish compatibility."
+  },
+  {
+    "id": "mikrotik-xs-da0001",
+    "model": "XS+DA0001",
+    "subtype": "cable",
+    "sourceUrl": "https://mikrotik.com/product/xs_da0001",
+    "badge": "25G DAC · 1 m",
+    "description": "1 m SFP28 direct-attach copper cable supporting 1/10/25 Gb/s connections within a rack or between adjacent racks.",
+    "scenario": "Short rack-to-rack links. Verify DAC compatibility, port modes, and supported speeds at both endpoints.",
+    "specs": [
+      [
+        "Form factor",
+        "SFP28"
+      ],
+      [
+        "Cable type",
+        "Direct-attach copper (DAC)"
+      ],
+      [
+        "Transmission medium",
+        "Copper"
+      ],
+      [
+        "Data rate",
+        "1 / 10 / 25 Gb/s"
+      ],
+      [
+        "Cable length",
+        "1 m"
+      ],
+      [
+        "Compliance",
+        "SFP+ MSA-compliant"
+      ]
+    ],
+    "tags": [
+      "25G",
+      "10G",
+      "SFP28",
+      "SFP+",
+      "DAC",
+      "Direct attach copper",
+      "1m"
+    ],
+    "name": "MikroTik XS+DA0001",
+    "brand": "MikroTik",
+    "category": "accessory",
+    "categoryLabel": "Components · Direct-attach cables",
+    "price": null,
+    "image": "assets/products/accessory-network-mikrotik-xs-da0001.png",
+    "imageAlt": "MikroTik XS+DA0001 direct-attach cable",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/2003_hi_res.png",
+    "imageNote": "Official MikroTik XS+DA0001 product image. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceTitle": "MikroTik · XS+DA0001",
+    "verifiedAt": "2026-10-16",
+    "featured": false,
+    "colors": [],
+    "newRank": 1,
+    "compatibilityNote": "Check the exact switch model, firmware, and port mode against the manufacturer compatibility list. Matching form factors and speeds alone do not establish compatibility."
+  }
+]

@@ -1,60 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | TrueCore Global</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Prepare a hardware enquiry for chenglian. Specify server, network and storage models, quantities, compatibility needs and delivery requirements." />
+    <meta name="theme-color" content="#090c12" />
+    <title>Project Enquiry | chenglian</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact.css" />
+  <link rel="preload" href="assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="typography.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
-
-    <nav class="bg-white shadow-md p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-700">TrueCore Global</h1>
-            <div class="space-x-6">
-                <a href="index.html" class="text-gray-600 hover:text-blue-500 transition">Home</a>
-                <a href="products.html" class="text-gray-600 hover:text-blue-500 transition">Products</a>
-                <a href="contact.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">Contact Us</a>
+  <body data-page="contact">
+    <div id="site-header"></div>
+    <main id="main-content">
+      <section class="con-intro container">
+        <nav class="con-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Project Enquiry</span></nav>
+        <p class="eyebrow">HARDWARE ENQUIRIES</p>
+        <h1>Discuss your project.</h1>
+        <p class="con-intro-copy">Outline the hardware, quantities and technical requirements for your deployment.</p>
+      </section>
+      <section class="con-layout container" aria-labelledby="formTitle">
+        <aside class="con-aside">
+          <div class="con-aside-heading"><span class="con-small-number">01 — 03</span><h2>What to include</h2><p>Start with a model number or describe what you need.</p></div>
+          <ol class="con-steps">
+            <li><span>01</span><div><h3>Hardware</h3><p>Models, quantities, processor and memory needs, storage capacity and port speeds.</p></div></li>
+            <li><span>02</span><div><h3>Environment</h3><p>Existing systems, interfaces and compatibility requirements.</p></div></li>
+            <li><span>03</span><div><h3>Schedule</h3><p>Target delivery dates, budget and any deployment constraints.</p></div></li>
+          </ol>
+          <a class="con-help-link" href="support.html"><i data-lucide="life-buoy" aria-hidden="true"></i><span><strong>Need technical help?</strong><small>Read our support guidance and FAQs</small></span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <div class="con-channel-note"><i data-lucide="info" aria-hidden="true"></i><p>Official phone and email details are not yet listed. Use a chenglian contact you have independently verified.</p></div>
+        </aside>
+        <div class="con-form-card">
+          <div class="con-form-top"><div><p class="eyebrow">PROJECT ENQUIRY</p><h2 id="formTitle">Prepare your enquiry</h2></div><span class="con-required-note">* Required</span></div>
+          <p class="con-form-lead">Complete the form to review, copy or download your enquiry.</p>
+          <div class="con-local-notice"><i data-lucide="file-text" aria-hidden="true"></i><p>This form prepares a document in your browser. It does not send an enquiry. Send the document to a verified chenglian contact.</p></div>
+          <div class="con-context" id="consultationContext" hidden></div>
+          <form id="consultationForm" class="con-form" novalidate tabindex="-1">
+            <div class="con-fields">
+              <label class="con-field"><span>Enquiry type <b>*</b></span><select name="type" required><option value="general">General enquiry</option><option value="product">Product advice</option><option value="business">Procurement</option><option value="technical">Compatibility check</option><option value="support">After-sales support</option></select></label>
+              <label class="con-field"><span>Product</span><select name="product"><option value="">Select a product (optional)</option></select></label>
+              <label class="con-field"><span>Name <b>*</b></span><input name="name" type="text" autocomplete="name" maxlength="80" required placeholder="Full name" aria-describedby="con-error-name" /><small class="con-error" id="con-error-name" data-error-for="name"></small></label>
+              <label class="con-field"><span>Email or phone <b>*</b></span><input name="contact" type="text" autocomplete="email" maxlength="160" required placeholder="Email or phone number" aria-describedby="con-error-contact" /><small class="con-error" id="con-error-contact" data-error-for="contact"></small></label>
+              <label class="con-field con-field-wide"><span id="organizationLabel">Company or organization</span><input name="organization" type="text" autocomplete="organization" maxlength="160" placeholder="Optional" aria-describedby="con-error-organization" /><small class="con-error" id="con-error-organization" data-error-for="organization"></small></label>
+              <label class="con-field con-field-wide"><span id="usageLabel">Deployment</span><input name="usage" type="text" maxlength="240" placeholder="e.g. Data center expansion" aria-describedby="con-error-usage" /><small class="con-error" id="con-error-usage" data-error-for="usage"></small></label>
             </div>
+            <fieldset class="con-business" id="businessFields" hidden disabled><legend>Procurement details</legend><div class="con-fields"><label class="con-field"><span>Estimated quantity <b>*</b></span><input name="quantity" type="number" min="1" max="1000000" step="1" inputmode="numeric" placeholder="e.g. 20" aria-describedby="con-error-quantity" /><small class="con-error" id="con-error-quantity" data-error-for="quantity"></small></label><label class="con-field"><span>Target delivery</span><input name="timeline" type="text" maxlength="100" placeholder="e.g. Next month" /></label></div></fieldset>
+            <label class="con-field con-message-field"><span>Requirements <b>*</b></span><textarea name="message" rows="5" minlength="10" maxlength="3000" required placeholder="Include models, quantities and technical requirements. Minimum 10 characters." aria-describedby="con-error-message con-message-count"></textarea><span class="con-textarea-foot"><small class="con-error" id="con-error-message" data-error-for="message"></small><small id="con-message-count">0 / 3000</small></span></label>
+            <label class="con-check"><input name="consent" type="checkbox" required aria-describedby="con-error-consent" /><span>I confirm these details may be used for this enquiry. I understand I must send it myself.</span></label><small class="con-error con-consent-error" id="con-error-consent" data-error-for="consent"></small>
+            <div class="con-submit-row"><p><i data-lucide="lock-keyhole" aria-hidden="true"></i>Prepared in your browser</p><button class="button button-primary" type="submit">Prepare enquiry <i data-lucide="arrow-right" aria-hidden="true"></i></button></div>
+            <p class="con-status" id="consultationMessage" role="status" aria-live="polite"></p>
+            <div class="con-draft"><label class="con-check"><input name="saveDraft" type="checkbox" /><span>I allow this browser to save my draft.</span></label><p>Select “Save draft” to store your contact details in this browser. Avoid shared devices.</p><div class="con-draft-actions"><button type="button" id="saveDraftButton" disabled>Save draft</button><button type="button" id="loadDraftButton" disabled>Restore draft</button><button type="button" id="removeDraftButton" disabled>Delete draft</button></div><p id="draftStatus" role="status" aria-live="polite">No draft saved.</p></div>
+          </form>
+          <section class="con-result" id="consultationResult" hidden aria-labelledby="resultTitle" tabindex="-1"><div class="con-result-heading"><span class="con-result-icon"><i data-lucide="check" aria-hidden="true"></i></span><div><h3 id="resultTitle">Review your enquiry</h3><p id="resultNotice">Check the details, then copy or download the document to send.</p></div></div><pre id="consultationSummary" tabindex="0" aria-label="Enquiry contents"></pre><div class="con-result-actions"><button class="button button-dark" type="button" id="copyConsultationButton"><i data-lucide="copy" aria-hidden="true"></i>Copy enquiry</button><button class="button button-outline" type="button" id="downloadConsultationButton"><i data-lucide="download" aria-hidden="true"></i>Download TXT</button><a href="#formTitle" class="text-link">Edit details <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div><p class="con-result-foot">Not sent. This document is an enquiry, not an order.</p></section>
         </div>
-    </nav>
-
-    <section class="py-16 flex-grow flex items-center justify-center px-4">
-        <div class="w-full max-w-lg bg-white p-10 rounded-xl shadow-lg border border-gray-100">
-            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">Request a Quote</h2>
-            <p class="text-center text-gray-500 mb-8">Tell us what equipment you need, and our sales team will get back to you with the best prices.</p>
-            
-            <form action="YOUR_FORMSPREE_LINK" method="POST" class="space-y-5">
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Company / Your Name *</label>
-                    <input type="text" name="name" required class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Business Email *</label>
-                    <input type="email" name="email" required class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Target Destination</label>
-                    <input type="text" name="destination" placeholder="e.g., India, Russia, Nigeria, Kenya, Ethiopia..." class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none transition text-sm">
-                </div>
-                
-                <div>
-                    <label class="block text-sm font-semibold text-gray-700 mb-1">Equipment Needed (Models/Quantities) *</label>
-                    <textarea name="message" rows="5" required placeholder="Please list the specific routers, switches, or modules you are looking for..." class="w-full border border-gray-300 p-3 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
-                </div>
-                
-                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded hover:bg-blue-700 transition shadow-md text-lg mt-4">
-                    Send Inquiry
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-gray-400 text-center py-8 mt-auto">
-        <p>&copy; 2026 TrueCore Global. Providing reliable used network equipment worldwide.</p>
-    </footer>
-
-</body>
+      </section>
+      <section class="con-bottom container"><span class="eyebrow">PRODUCT CATALOG</span><h2>Still choosing hardware?</h2><a href="products.html" class="text-link">Browse products <i data-lucide="arrow-right" aria-hidden="true"></i></a></section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="assets/lucide.min.js"></script><script src="product-data.js"></script><script src="site.js"></script><script src="contact.js"></script>
+  </body>
 </html>

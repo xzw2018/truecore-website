@@ -1,0 +1,843 @@
+[
+  {
+    "id": "h3c-s5130s-28p-ei",
+    "name": "H3C S5130S-28P-EI",
+    "brand": "H3C",
+    "model": "S5130S-28P-EI",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-h3c-s5130s-28p-ei.jpg",
+    "imageAlt": "H3C S5130S-28P-EI switch",
+    "imageSource": "https://resource.h3c.com/cn/202106/25/20210625_5849614_%E6%9C%AA%E6%A0%87%E9%A2%98-4_1418714_30003_0.jpg",
+    "imageNote": "Official H3C product image for S5130S-28P-EI. Copyright belongs to H3C.",
+    "imageScope": "model",
+    "sourceUrl": "https://www.h3c.com/cn/Products_And_Solution/InterConnect/Products/Switches/Products/Park_Switches/Access_Switch/S5130/H3C_S5130S-EI/",
+    "sourceTitle": "H3C S5130S-EI Next-Generation High-Performance Gigabit Ethernet Switches",
+    "verifiedAt": "2026-10-16",
+    "badge": "24-port Gigabit access",
+    "description": "24-port Gigabit access switch with four Gigabit SFP uplinks for office endpoints and campus networks.",
+    "scenario": "Office and campus access with Gigabit fiber uplinks. Check transceiver compatibility and management requirements.",
+    "specs": [
+      [
+        "Copper ports",
+        "24 × 10/100/1000BASE-T"
+      ],
+      [
+        "Optical ports",
+        "4 × 1000BASE-X SFP"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "440 × 160 × 43.6 mm"
+      ],
+      [
+        "Maximum power",
+        "23 W"
+      ],
+      [
+        "Weight",
+        "≤ 2.5 kg"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "24 ports",
+      "SFP",
+      "Campus",
+      "Office"
+    ],
+    "featured": true,
+    "colors": [],
+    "newRank": 14
+  },
+  {
+    "id": "h3c-s5130s-52s-ei",
+    "name": "H3C S5130S-52S-EI",
+    "brand": "H3C",
+    "model": "S5130S-52S-EI",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-h3c-s5130s-52s-ei.jpg",
+    "imageAlt": "H3C S5130S-52S-EI switch",
+    "imageSource": "https://resource.h3c.com/cn/202106/25/20210625_5849611_%E6%9C%AA%E6%A0%87%E9%A2%98-7_1418711_30003_0.jpg",
+    "imageNote": "Official H3C product image for S5130S-52S-EI. Copyright belongs to H3C.",
+    "imageScope": "model",
+    "sourceUrl": "https://www.h3c.com/cn/Products_And_Solution/InterConnect/Products/Switches/Products/Park_Switches/Access_Switch/S5130/H3C_S5130S-EI/",
+    "sourceTitle": "H3C S5130S-EI Next-Generation High-Performance Gigabit Ethernet Switches",
+    "verifiedAt": "2026-10-16",
+    "badge": "48-port Gigabit access",
+    "description": "48-port Gigabit access switch with four 10G SFP+ uplinks for high-density office and campus access.",
+    "scenario": "Dense office and campus access with 10G connections to upstream switches.",
+    "specs": [
+      [
+        "Copper ports",
+        "48 × 10/100/1000BASE-T"
+      ],
+      [
+        "Uplink ports",
+        "4 × 1/10GE SFP+"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "440 × 230 × 43.6 mm"
+      ],
+      [
+        "Maximum power",
+        "44 W"
+      ],
+      [
+        "Weight",
+        "≤ 3.5 kg"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "48 ports",
+      "10G uplinks",
+      "SFP+",
+      "Campus"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 13
+  },
+  {
+    "id": "h3c-s5560x-30c-ei",
+    "name": "H3C S5560X-30C-EI",
+    "brand": "H3C",
+    "model": "S5560X-30C-EI",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-h3c-s5560x-30c-ei.jpg",
+    "imageAlt": "H3C S5560X-30C-EI switch",
+    "imageSource": "https://resource.h3c.com/en/202008/06/20200806_5114672_1_1317652_294549_0.jpg",
+    "imageNote": "Official H3C product image for S5560X-30C-EI. Copyright belongs to H3C.",
+    "imageScope": "model",
+    "sourceUrl": "https://www.h3c.com/en/Products_and_Solutions/InterConnect/Switches/Products/Campus_Network/Aggregation/S5500/H3C_S5560X-EI/",
+    "sourceTitle": "H3C S5560X-EI Series Converged Gigabit Switches",
+    "verifiedAt": "2026-10-16",
+    "badge": "Modular aggregation",
+    "description": "24-port Gigabit switch with four 10G SFP+ ports and an expansion slot for campus access or aggregation.",
+    "scenario": "Campus access and small aggregation networks. Specify expansion cards, power supplies, and fan modules for the deployment.",
+    "specs": [
+      [
+        "Copper ports",
+        "24 × Gigabit (including 8 combo pairs)"
+      ],
+      [
+        "Fixed SFP+ ports",
+        "4 × 10G SFP+"
+      ],
+      [
+        "Expansion slots",
+        "1"
+      ],
+      [
+        "Power supply slots",
+        "2"
+      ],
+      [
+        "Port switching capacity",
+        "288 Gb/s"
+      ],
+      [
+        "Forwarding rate",
+        "216 Mpps"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "440 × 360 × 43.6 mm"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "24 ports",
+      "10G",
+      "Modular",
+      "Comware",
+      "Aggregation"
+    ],
+    "featured": true,
+    "colors": [],
+    "newRank": 12
+  },
+  {
+    "id": "h3c-s5560x-54c-ei",
+    "name": "H3C S5560X-54C-EI",
+    "brand": "H3C",
+    "model": "S5560X-54C-EI",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-h3c-s5560x-54c-ei.jpg",
+    "imageAlt": "H3C S5560X-54C-EI switch",
+    "imageSource": "https://resource.h3c.com/en/202008/06/20200806_5114671_2_1317651_294549_0.jpg",
+    "imageNote": "Official H3C product image for S5560X-54C-EI. Copyright belongs to H3C.",
+    "imageScope": "model",
+    "sourceUrl": "https://www.h3c.com/en/Products_and_Solutions/InterConnect/Switches/Products/Campus_Network/Aggregation/S5500/H3C_S5560X-EI/",
+    "sourceTitle": "H3C S5560X-EI Series Converged Gigabit Switches",
+    "verifiedAt": "2026-10-16",
+    "badge": "48-port expandable aggregation",
+    "description": "48-port Gigabit switch with four 10G SFP+ ports, an expansion slot, and two power supply slots.",
+    "scenario": "High-density campus access and aggregation. Confirm the required power supplies and expansion modules.",
+    "specs": [
+      [
+        "Copper ports",
+        "48 × 10/100/1000BASE-T"
+      ],
+      [
+        "Fixed SFP+ ports",
+        "4 × 10G SFP+"
+      ],
+      [
+        "Expansion slots",
+        "1"
+      ],
+      [
+        "Power supply slots",
+        "2"
+      ],
+      [
+        "Port switching capacity",
+        "336 Gb/s"
+      ],
+      [
+        "Forwarding rate",
+        "252 Mpps"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "440 × 360 × 43.6 mm"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "48 ports",
+      "10G",
+      "Modular",
+      "Comware",
+      "Aggregation"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 11
+  },
+  {
+    "id": "mikrotik-crs326-24g-2s-rm",
+    "name": "MikroTik CRS326-24G-2S+RM",
+    "brand": "MikroTik",
+    "model": "CRS326-24G-2S+RM",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs326-24g-2s-rm.png",
+    "imageAlt": "MikroTik CRS326-24G-2S+RM switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/1301_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS326-24G-2S+RM. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/CRS326-24G-2SplusRM",
+    "sourceTitle": "MikroTik · CRS326-24G-2S+RM",
+    "verifiedAt": "2026-10-16",
+    "badge": "Dual-boot Gigabit access",
+    "description": "24-port Gigabit switch with two 10G SFP+ ports, passive cooling, and a choice of RouterOS or SwOS.",
+    "scenario": "Office access with 10G uplinks. Choose RouterOS or SwOS to suit the required management and routing functions.",
+    "specs": [
+      [
+        "Copper ports",
+        "24 × 10/100/1000 Mb/s"
+      ],
+      [
+        "Optical ports",
+        "2 × 10G SFP+"
+      ],
+      [
+        "Operating system",
+        "RouterOS / SwOS dual boot"
+      ],
+      [
+        "Cooling",
+        "Passive cooling"
+      ],
+      [
+        "Maximum power",
+        "24 W"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "443 × 144 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "24 ports",
+      "10G",
+      "SFP+",
+      "RouterOS",
+      "SwOS"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 10
+  },
+  {
+    "id": "mikrotik-crs328-24p-4s-rm",
+    "name": "MikroTik CRS328-24P-4S+RM",
+    "brand": "MikroTik",
+    "model": "CRS328-24P-4S+RM",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs328-24p-4s-rm.png",
+    "imageAlt": "MikroTik CRS328-24P-4S+RM switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/1493_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS328-24P-4S+RM. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/crs328_24p_4s_rm",
+    "sourceTitle": "MikroTik · CRS328-24P-4S+RM",
+    "verifiedAt": "2026-10-16",
+    "badge": "24-port PoE access",
+    "description": "24-port Gigabit PoE switch with four 10G SFP+ uplinks and a 450 W budget for powered endpoints.",
+    "scenario": "Wireless APs, IP phones, and cameras. Allow for per-port limits and the 150 W budget per eight-port group.",
+    "specs": [
+      [
+        "Copper ports",
+        "24 × Gigabit PoE"
+      ],
+      [
+        "Uplink ports",
+        "4 × 10G SFP+"
+      ],
+      [
+        "PoE standards",
+        "802.3af/at; passive PoE supported"
+      ],
+      [
+        "PoE budget",
+        "450 W (150 W per group of 8 ports)"
+      ],
+      [
+        "PoE per port (max.)",
+        "30 W"
+      ],
+      [
+        "Operating system",
+        "RouterOS / SwOS dual boot"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "443 × 300 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "Gigabit",
+      "PoE",
+      "24 ports",
+      "450W",
+      "SFP+",
+      "AP"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 9
+  },
+  {
+    "id": "mikrotik-crs309-1g-8s-in",
+    "name": "MikroTik CRS309-1G-8S+IN",
+    "brand": "MikroTik",
+    "model": "CRS309-1G-8S+IN",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs309-1g-8s-in.png",
+    "imageAlt": "MikroTik CRS309-1G-8S+IN switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/1730_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS309-1G-8S+IN. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/crs309_1g_8s_in",
+    "sourceTitle": "MikroTik · CRS309-1G-8S+IN",
+    "verifiedAt": "2026-10-16",
+    "badge": "8-port 10G aggregation",
+    "description": "Compact eight-port 10G SFP+ switch with passive cooling, a Gigabit Ethernet port, and RouterOS / SwOS dual boot.",
+    "scenario": "10G aggregation in small server rooms. Select compatible transceivers or DAC cables for each link.",
+    "specs": [
+      [
+        "Optical ports",
+        "8 × 10G SFP+"
+      ],
+      [
+        "Copper ports",
+        "1 × Gigabit Ethernet"
+      ],
+      [
+        "Switching capacity",
+        "162 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "81 Gb/s"
+      ],
+      [
+        "Cooling",
+        "Passive cooling"
+      ],
+      [
+        "Maximum power",
+        "23 W"
+      ],
+      [
+        "Operating system",
+        "RouterOS / SwOS dual boot"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "10G",
+      "SFP+",
+      "8 ports",
+      "Passive cooling",
+      "Aggregation"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 8
+  },
+  {
+    "id": "mikrotik-crs312-4c-8xg-rm",
+    "name": "MikroTik CRS312-4C+8XG-RM",
+    "brand": "MikroTik",
+    "model": "CRS312-4C+8XG-RM",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs312-4c-8xg-rm.png",
+    "imageAlt": "MikroTik CRS312-4C+8XG-RM switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/1825_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS312-4C+8XG-RM. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/crs312_4c_8xg_rm",
+    "sourceTitle": "MikroTik · CRS312-4C+8XG-RM",
+    "verifiedAt": "2026-10-16",
+    "badge": "10G copper / fiber",
+    "description": "10G switch with eight multi-gigabit RJ45 ports and four RJ45/SFP+ combo ports for mixed copper and fiber networks.",
+    "scenario": "10G links for workstations, storage, and servers. Each combo port uses either its RJ45 or SFP+ interface.",
+    "specs": [
+      [
+        "Fixed copper ports",
+        "8 × 1/2.5/5/10G RJ45"
+      ],
+      [
+        "Combo ports",
+        "4 × 10G RJ45 / SFP+ combo pairs (one interface active per pair)"
+      ],
+      [
+        "Switching capacity",
+        "240 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "120 Gb/s"
+      ],
+      [
+        "Power supplies",
+        "Dual AC inputs with redundant power support"
+      ],
+      [
+        "Operating system",
+        "RouterOS v7 / SwOS"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "443 × 183 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "10GBASE-T",
+      "Multi-gigabit",
+      "Combo",
+      "SFP+",
+      "Aggregation"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 7
+  },
+  {
+    "id": "mikrotik-crs317-1g-16s-rm",
+    "name": "MikroTik CRS317-1G-16S+RM",
+    "brand": "MikroTik",
+    "model": "CRS317-1G-16S+RM",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs317-1g-16s-rm.png",
+    "imageAlt": "MikroTik CRS317-1G-16S+RM switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/1324_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS317-1G-16S+RM. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/crs317_1g_16s_rm",
+    "sourceTitle": "MikroTik · CRS317-1G-16S+RM",
+    "verifiedAt": "2026-10-16",
+    "badge": "16-port 10G aggregation",
+    "description": "16-port 10G SFP+ rack switch with dual redundant power supplies and a Gigabit Ethernet management port.",
+    "scenario": "10G aggregation between servers and access switches. Match transceivers and cables to link distance.",
+    "specs": [
+      [
+        "Optical ports",
+        "16 × 10G SFP+"
+      ],
+      [
+        "Management port",
+        "1 × Gigabit Ethernet"
+      ],
+      [
+        "Power supplies",
+        "Dual redundant power supplies, 2 AC inputs"
+      ],
+      [
+        "Memory",
+        "1 GB"
+      ],
+      [
+        "Processor",
+        "Dual-core 800 MHz"
+      ],
+      [
+        "Operating system",
+        "RouterOS / SwOS dual boot"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "443 × 224 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "10G",
+      "16 ports",
+      "SFP+",
+      "Dual power supplies",
+      "Rackmount",
+      "Aggregation"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 6
+  },
+  {
+    "id": "mikrotik-crs504-4xq-in",
+    "name": "MikroTik CRS504-4XQ-IN",
+    "brand": "MikroTik",
+    "model": "CRS504-4XQ-IN",
+    "category": "switch",
+    "subtype": "datacenter",
+    "categoryLabel": "Switches · Data center",
+    "price": null,
+    "image": "assets/products/switch-mikrotik-crs504-4xq-in.png",
+    "imageAlt": "MikroTik CRS504-4XQ-IN switch",
+    "imageSource": "https://cdn.mikrotik.com/web-assets/rb_images/2156_hi_res.png",
+    "imageNote": "Official MikroTik product image for CRS504-4XQ-IN. Copyright belongs to MikroTik.",
+    "imageScope": "model",
+    "sourceUrl": "https://mikrotik.com/product/crs504_4xq_in",
+    "sourceTitle": "MikroTik · CRS504-4XQ-IN",
+    "verifiedAt": "2026-10-16",
+    "badge": "100G interconnect",
+    "description": "Compact switch with four 100G QSFP28 ports, 25G breakout support, and dual hot-swap power supplies for data center interconnects.",
+    "scenario": "100G interconnects and 25G breakout links. Confirm the required port modes and compatible breakout cables.",
+    "specs": [
+      [
+        "QSFP28 ports",
+        "4 × 100G QSFP28"
+      ],
+      [
+        "Port breakout",
+        "Up to 16 × 25G with compatible breakout cables"
+      ],
+      [
+        "Management port",
+        "1 × 10/100 Mb/s"
+      ],
+      [
+        "Power supplies",
+        "Dual hot-swap power supplies"
+      ],
+      [
+        "Maximum power",
+        "41 W; 25 W without attachments"
+      ],
+      [
+        "Operating system",
+        "RouterOS v7"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "320 × 185 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "100G",
+      "QSFP28",
+      "25G",
+      "Data center",
+      "High-speed interconnect"
+    ],
+    "featured": true,
+    "colors": [],
+    "newRank": 5
+  },
+  {
+    "id": "ubiquiti-usw-pro-24-poe",
+    "name": "Ubiquiti USW-Pro-24-POE",
+    "brand": "Ubiquiti",
+    "model": "USW-Pro-24-POE",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-ubiquiti-usw-pro-24-poe.png",
+    "imageAlt": "Ubiquiti USW-Pro-24-POE switch",
+    "imageSource": "https://cdn.ecomm.ui.com/products/5b69cdb5-e7ea-44e6-ae16-8714339038fb/18d39964-78e7-45f9-874d-e331f1408730.png",
+    "imageNote": "Official Ubiquiti product image for USW-Pro-24-POE. Copyright belongs to Ubiquiti.",
+    "imageScope": "model",
+    "sourceUrl": "https://techspecs.ui.com/unifi/switching/usw-pro-24-poe",
+    "sourceTitle": "UniFi Pro 24 PoE - Tech Specs",
+    "verifiedAt": "2026-10-16",
+    "badge": "400 W PoE access",
+    "description": "24-port Gigabit PoE switch with two 10G SFP+ uplinks, Layer 3 features, and a 400 W PoE budget.",
+    "scenario": "APs, cameras, and phones in UniFi networks, with 10G uplinks to the aggregation layer.",
+    "specs": [
+      [
+        "Copper ports",
+        "24 × Gigabit (16 PoE+ / 8 PoE++)"
+      ],
+      [
+        "Uplink ports",
+        "2 × 10G SFP+"
+      ],
+      [
+        "PoE budget",
+        "400 W"
+      ],
+      [
+        "Switching capacity",
+        "88 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "44 Gb/s"
+      ],
+      [
+        "Switching features",
+        "Layer 3 features supported"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "442 × 285 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "UniFi",
+      "Gigabit",
+      "PoE++",
+      "24 ports",
+      "400W",
+      "10G uplinks"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 4
+  },
+  {
+    "id": "ubiquiti-usw-pro-max-24-poe",
+    "name": "Ubiquiti USW-Pro-Max-24-PoE",
+    "brand": "Ubiquiti",
+    "model": "USW-Pro-Max-24-PoE",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-ubiquiti-usw-pro-max-24-poe.png",
+    "imageAlt": "Ubiquiti USW-Pro-Max-24-PoE switch",
+    "imageSource": "https://cdn.ecomm.ui.com/products/58922518-88f6-4c75-89c1-f57ba3d8253a/797246c6-70eb-4606-be9a-77515ac74451.png",
+    "imageNote": "Official Ubiquiti product image for USW-Pro-Max-24-PoE. Copyright belongs to Ubiquiti.",
+    "imageScope": "model",
+    "sourceUrl": "https://techspecs.ui.com/unifi/switching/usw-pro-max-24-poe",
+    "sourceTitle": "UniFi Pro Max 24 PoE - Tech Specs",
+    "verifiedAt": "2026-10-16",
+    "badge": "2.5G PoE++ access",
+    "description": "24-port switch combining 16 Gigabit and eight 2.5GbE ports with PoE, 10G SFP+ uplinks, and Etherlighting indicators.",
+    "scenario": "Multi-gigabit APs and enterprise endpoints. Match each powered device to the port's PoE+ or PoE++ capability.",
+    "specs": [
+      [
+        "1GbE copper ports",
+        "16 (8 PoE+ / 8 PoE++)"
+      ],
+      [
+        "2.5GbE copper ports",
+        "8 (all support PoE++)"
+      ],
+      [
+        "Uplink ports",
+        "2 × 10G SFP+"
+      ],
+      [
+        "PoE budget",
+        "400 W"
+      ],
+      [
+        "Switching capacity",
+        "112 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "56 Gb/s"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "442 × 325 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "UniFi",
+      "2.5G",
+      "PoE++",
+      "24 ports",
+      "400W",
+      "Etherlighting"
+    ],
+    "featured": true,
+    "colors": [],
+    "newRank": 3
+  },
+  {
+    "id": "ubiquiti-usw-pro-48",
+    "name": "Ubiquiti USW-Pro-48",
+    "brand": "Ubiquiti",
+    "model": "USW-Pro-48",
+    "category": "switch",
+    "subtype": "access",
+    "categoryLabel": "Switches · Enterprise access",
+    "price": null,
+    "image": "assets/products/switch-ubiquiti-usw-pro-48.png",
+    "imageAlt": "Ubiquiti USW-Pro-48 switch",
+    "imageSource": "https://cdn.ecomm.ui.com/products/17a1db0a-a705-4ea0-b538-2972ca71615a/e5caa219-3faa-48a5-a4e1-d7eea81d738b.png",
+    "imageNote": "Official Ubiquiti product image for USW-Pro-48. Copyright belongs to Ubiquiti.",
+    "imageScope": "model",
+    "sourceUrl": "https://techspecs.ui.com/unifi/switching/usw-pro-48",
+    "sourceTitle": "UniFi Pro 48 - Tech Specs",
+    "verifiedAt": "2026-10-16",
+    "badge": "48-port Layer 3 access",
+    "description": "48-port Gigabit switch with four 10G SFP+ uplinks and Layer 3 features for high-density UniFi access networks.",
+    "scenario": "High-density office access under UniFi management, with optional DC backup power.",
+    "specs": [
+      [
+        "Copper ports",
+        "48 × Gigabit RJ45"
+      ],
+      [
+        "Uplink ports",
+        "4 × 10G SFP+"
+      ],
+      [
+        "Switching capacity",
+        "176 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "88 Gb/s"
+      ],
+      [
+        "Switching features",
+        "Layer 3 features supported"
+      ],
+      [
+        "Maximum power",
+        "60 W"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "442 × 285 × 44 mm"
+      ]
+    ],
+    "tags": [
+      "UniFi",
+      "Gigabit",
+      "48 ports",
+      "Layer 3 switching",
+      "SFP+",
+      "10G uplinks"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 2
+  },
+  {
+    "id": "ubiquiti-usw-aggregation",
+    "name": "Ubiquiti USW-Aggregation",
+    "brand": "Ubiquiti",
+    "model": "USW-Aggregation",
+    "category": "switch",
+    "subtype": "aggregation",
+    "categoryLabel": "Switches · Aggregation",
+    "price": null,
+    "image": "assets/products/switch-ubiquiti-usw-aggregation.png",
+    "imageAlt": "Ubiquiti USW-Aggregation switch",
+    "imageSource": "https://cdn.ecomm.ui.com/products/1c748fb1-b4df-43ef-83e0-d5ed26f9db7c/b06fde87-241d-4b4e-8319-8d7d29f6f6c2.png",
+    "imageNote": "Official Ubiquiti product image for USW-Aggregation. Copyright belongs to Ubiquiti.",
+    "imageScope": "model",
+    "sourceUrl": "https://techspecs.ui.com/unifi/switching/usw-aggregation",
+    "sourceTitle": "UniFi Aggregation - Tech Specs",
+    "verifiedAt": "2026-10-16",
+    "badge": "8-port 10G fiber",
+    "description": "Eight-port 10G SFP+ aggregation switch in a 1U chassis, with 160 Gb/s switching capacity and UniFi management.",
+    "scenario": "Fiber or DAC aggregation between UniFi switches. Configure link aggregation where additional capacity or redundancy is required.",
+    "specs": [
+      [
+        "Optical ports",
+        "8 × 10G SFP+ (1G supported)"
+      ],
+      [
+        "Switching capacity",
+        "160 Gb/s"
+      ],
+      [
+        "Non-blocking throughput",
+        "80 Gb/s"
+      ],
+      [
+        "Forwarding rate",
+        "119 Mpps"
+      ],
+      [
+        "Maximum power",
+        "36 W (including SFP modules)"
+      ],
+      [
+        "Dimensions (W × D × H)",
+        "442 × 120 × 43.7 mm"
+      ]
+    ],
+    "tags": [
+      "UniFi",
+      "10G",
+      "8 ports",
+      "SFP+",
+      "Aggregation",
+      "LACP"
+    ],
+    "featured": false,
+    "colors": [],
+    "newRank": 1
+  }
+]

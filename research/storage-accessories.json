@@ -1,0 +1,789 @@
+[
+  {
+    "id": "seagate-exos-x18-18tb",
+    "name": "Seagate Exos X18 18 TB",
+    "brand": "Seagate",
+    "model": "ST18000NM000J",
+    "category": "storage",
+    "subtype": "hdd",
+    "categoryLabel": "Server drives · Enterprise HDD",
+    "image": "assets/products/storage-seagate-exos-x18.png",
+    "imageScope": "series",
+    "imageSource": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x18-channel-DS2045-4-2106US-en_US.pdf#page=1",
+    "imageNote": "Seagate Exos X18 data sheet: 18 TB series image. Interface and encryption variants may look alike; this listing specifies ST18000NM000J.",
+    "sourceUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x18-channel-DS2045-4-2106US-en_US.pdf",
+    "sourceTitle": "Seagate Exos X18 Data Sheet DS2045-4",
+    "badge": "18 TB · SATA",
+    "description": "18 TB helium-filled enterprise SATA HDD with CMR recording and a 256 MB cache for bulk storage.",
+    "scenario": "Bulk server storage and backups. Check chassis, backplane, and RAID controller support for capacity and sector format.",
+    "specs": [
+      [
+        "Capacity",
+        "18 TB"
+      ],
+      [
+        "Interface",
+        "SATA 6 Gb/s"
+      ],
+      [
+        "Spindle speed",
+        "7200 RPM"
+      ],
+      [
+        "Recording technology",
+        "CMR"
+      ],
+      [
+        "Cache",
+        "256 MB"
+      ],
+      [
+        "Sector format",
+        "512e / 4Kn FastFormat"
+      ],
+      [
+        "Sustained transfer rate",
+        "Up to 270 MB/s"
+      ]
+    ],
+    "tags": [
+      "18 TB",
+      "Enterprise HDD",
+      "SATA",
+      "CMR",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Seagate Exos X18 18 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 100
+  },
+  {
+    "id": "seagate-exos-x20-20tb",
+    "name": "Seagate Exos X20 20 TB",
+    "brand": "Seagate",
+    "model": "ST20000NM007D",
+    "category": "storage",
+    "subtype": "hdd",
+    "categoryLabel": "Server drives · Enterprise HDD",
+    "image": "assets/products/storage-seagate-exos-x20.png",
+    "imageScope": "series",
+    "imageSource": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf#page=1",
+    "imageNote": "Seagate Exos X20 data sheet: 20 TB series image. Interface and firmware details must match ST20000NM007D.",
+    "sourceUrl": "https://www.seagate.com/files/www-content/datasheets/pdfs/exos-x20-channel-DS2080-2111GB-en_EM.pdf",
+    "sourceTitle": "Seagate Exos X20 Data Sheet DS2080",
+    "badge": "20 TB · SATA",
+    "description": "20 TB helium-filled enterprise SATA HDD with CMR recording and 7200 RPM operation for capacity-focused storage.",
+    "scenario": "Data lakes, backup archives, and storage expansion. Check backplane power, cooling, and controller compatibility.",
+    "specs": [
+      [
+        "Capacity",
+        "20 TB"
+      ],
+      [
+        "Interface",
+        "SATA 6 Gb/s"
+      ],
+      [
+        "Spindle speed",
+        "7200 RPM"
+      ],
+      [
+        "Recording technology",
+        "CMR"
+      ],
+      [
+        "Cache",
+        "256 MB"
+      ],
+      [
+        "Sector format",
+        "512e / 4Kn FastFormat"
+      ],
+      [
+        "Sustained transfer rate",
+        "Up to 285 MB/s"
+      ]
+    ],
+    "tags": [
+      "20 TB",
+      "Enterprise HDD",
+      "SATA",
+      "CMR",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Seagate Exos X20 20 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 99
+  },
+  {
+    "id": "seagate-exos-x24-24tb",
+    "name": "Seagate Exos X24 24 TB",
+    "brand": "Seagate",
+    "model": "ST24000NM002H",
+    "category": "storage",
+    "subtype": "hdd",
+    "categoryLabel": "Server drives · Enterprise HDD",
+    "image": "assets/products/storage-seagate-exos-x24.png",
+    "imageScope": "series",
+    "imageSource": "https://www.seagate.com/content/dam/seagate/en/content-fragments/products/datasheets/exos-x24/exos-x24-DS2080-2307US-en_US.pdf#page=1",
+    "imageNote": "Seagate Exos X24 series image. The image does not identify an individual SKU; specifications apply to ST24000NM002H, 24 TB SATA.",
+    "sourceUrl": "https://www.seagate.com/content/dam/seagate/en/content-fragments/products/datasheets/exos-x24/exos-x24-DS2080-2307US-en_US.pdf",
+    "sourceTitle": "Seagate Exos X24 Data Sheet DS2080-2307US",
+    "badge": "24 TB · SATA",
+    "description": "24 TB helium-filled enterprise SATA HDD with CMR recording and a 512 MB cache for high-density storage.",
+    "scenario": "Capacity-focused storage nodes and backup systems. Verify the full part number against the array controller support list.",
+    "specs": [
+      [
+        "Capacity",
+        "24 TB"
+      ],
+      [
+        "Interface",
+        "SATA 6 Gb/s"
+      ],
+      [
+        "Spindle speed",
+        "7200 RPM"
+      ],
+      [
+        "Recording technology",
+        "CMR"
+      ],
+      [
+        "Cache",
+        "512 MB"
+      ],
+      [
+        "Sector format",
+        "512e / 4Kn"
+      ],
+      [
+        "Sustained transfer rate",
+        "Up to 285 MB/s"
+      ]
+    ],
+    "tags": [
+      "24 TB",
+      "Enterprise HDD",
+      "SATA",
+      "CMR",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Seagate Exos X24 24 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 98
+  },
+  {
+    "id": "samsung-pm893-7-68tb",
+    "name": "Samsung PM893 7.68 TB",
+    "brand": "Samsung",
+    "model": "MZ7L37T6HBLA-00W07",
+    "category": "storage",
+    "subtype": "sata-ssd",
+    "categoryLabel": "Server drives · Enterprise SATA SSD",
+    "image": "assets/products/storage-samsung-pm893-7680gb.png",
+    "imageScope": "model",
+    "imageSource": "https://image.semiconductor.samsung.com/resources/data-sheet/samsung_ssd_pm893_data_sheet_rev1_0.pdf#page=1",
+    "imageNote": "Samsung PM893 data sheet: 7.68 TB product image. Label details and part-number suffixes may vary by production batch.",
+    "sourceUrl": "https://image.semiconductor.samsung.com/resources/data-sheet/samsung_ssd_pm893_data_sheet_rev1_0.pdf",
+    "sourceTitle": "Samsung V-NAND SSD PM893 Data Sheet Rev.1.0",
+    "badge": "7.68 TB · SATA SSD",
+    "description": "7.68 TB enterprise SATA SSD with Samsung V-NAND TLC in a 2.5-inch enclosure for application and storage servers.",
+    "scenario": "Enterprise applications and SATA flash storage. Performance figures are manufacturer test maxima; results vary by workload and system.",
+    "specs": [
+      [
+        "Capacity",
+        "7.68 TB"
+      ],
+      [
+        "Interface",
+        "SATA 6 Gb/s"
+      ],
+      [
+        "Form factor",
+        "2.5-inch / 7 mm"
+      ],
+      [
+        "NAND flash",
+        "Samsung V-NAND TLC"
+      ],
+      [
+        "Sequential read",
+        "Up to 550 MB/s"
+      ],
+      [
+        "Sequential write",
+        "Up to 520 MB/s"
+      ],
+      [
+        "Write endurance",
+        "14,016 TBW"
+      ]
+    ],
+    "tags": [
+      "7.68 TB",
+      "SATA SSD",
+      "Enterprise SSD",
+      "TLC",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Samsung PM893 7.68 TB",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 97
+  },
+  {
+    "id": "samsung-pm9a3-3-84tb",
+    "name": "Samsung PM9A3 3.84 TB",
+    "brand": "Samsung",
+    "model": "MZQL23T8HCLS-00W07",
+    "category": "storage",
+    "subtype": "nvme-ssd",
+    "categoryLabel": "Server drives · Enterprise NVMe SSD",
+    "image": "assets/products/storage-samsung-pm9a3-3840gb.png",
+    "imageScope": "series",
+    "imageSource": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_SSD_PM9A3_Data_Sheet_Rev1.0.pdf#page=1",
+    "imageNote": "Samsung PM9A3 U.2 series image. The enclosure does not identify capacity; this listing specifies MZQL23T8HCLS-00W07, 3.84 TB.",
+    "sourceUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_SSD_PM9A3_Data_Sheet_Rev1.0.pdf",
+    "sourceTitle": "Samsung V-NAND SSD PM9A3 Data Sheet Rev.1.0",
+    "badge": "3.84 TB · U.2",
+    "description": "3.84 TB U.2 enterprise SSD with PCIe 4.0 x4, NVMe 1.4, and Samsung V-NAND TLC for data center storage.",
+    "scenario": "NVMe storage nodes and enterprise servers. Confirm U.2 NVMe backplane support; 2.5-inch dimensions alone do not establish compatibility.",
+    "specs": [
+      [
+        "Capacity",
+        "3.84 TB"
+      ],
+      [
+        "Interface",
+        "PCIe 4.0 x4 / NVMe 1.4"
+      ],
+      [
+        "Form factor",
+        "2.5-inch U.2 / 7 mm"
+      ],
+      [
+        "NAND flash",
+        "Samsung V-NAND TLC"
+      ],
+      [
+        "Sequential read",
+        "Up to 6,900 MB/s"
+      ],
+      [
+        "Sequential write",
+        "Up to 4,100 MB/s"
+      ],
+      [
+        "Write endurance",
+        "7,008 TBW"
+      ]
+    ],
+    "tags": [
+      "3.84 TB",
+      "NVMe SSD",
+      "U.2",
+      "PCIe 4.0",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Samsung PM9A3 3.84 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 96
+  },
+  {
+    "id": "kingston-dc600m-1-92tb",
+    "name": "Kingston DC600M 1.92 TB",
+    "brand": "Kingston",
+    "model": "SEDC600M/1920G",
+    "category": "storage",
+    "subtype": "sata-ssd",
+    "categoryLabel": "Server drives · Enterprise SATA SSD",
+    "image": "assets/products/storage-kingston-dc600m.jpg",
+    "imageScope": "series",
+    "imageSource": "https://media.kingston.com/kingston/key-features/ktc-keyfeatures-ssd-dc600-kf5-lg.jpg",
+    "imageNote": "Official Kingston DC600M series application image. The specified capacity corresponds to SEDC600M/1920G.",
+    "sourceUrl": "https://www.kingston.com/cn/memory/search?partid=SEDC600M%2F1920G",
+    "sourceTitle": "Kingston SEDC600M/1920G Official Product Page",
+    "badge": "1.92 TB · SATA SSD",
+    "description": "1.92 TB enterprise SATA SSD with 3D TLC NAND and hardware power-loss protection for mixed read/write workloads.",
+    "scenario": "Mixed read/write workloads and SATA storage upgrades. Size drive endurance to the expected write volume.",
+    "specs": [
+      [
+        "Capacity",
+        "1.92 TB"
+      ],
+      [
+        "Interface",
+        "SATA 6 Gb/s"
+      ],
+      [
+        "Form factor",
+        "2.5-inch / 7 mm"
+      ],
+      [
+        "NAND flash",
+        "3D TLC"
+      ],
+      [
+        "Sequential read",
+        "Up to 560 MB/s"
+      ],
+      [
+        "Sequential write",
+        "Up to 530 MB/s"
+      ],
+      [
+        "Power-loss protection",
+        "Onboard hardware PLP"
+      ]
+    ],
+    "tags": [
+      "1.92 TB",
+      "SATA SSD",
+      "PLP",
+      "Mixed-use workloads",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Kingston DC600M 1.92 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 95
+  },
+  {
+    "id": "kingston-dc2000b-480gb",
+    "name": "Kingston DC2000B 480 GB",
+    "brand": "Kingston",
+    "model": "SEDC2000BM8/480G",
+    "category": "storage",
+    "subtype": "nvme-ssd",
+    "categoryLabel": "Server drives · M.2 boot SSD",
+    "image": "assets/products/storage-kingston-dc2000b.jpg",
+    "imageScope": "series",
+    "imageSource": "https://media.kingston.com/kingston/key-features/ktc-keyfeatures-ssd-dc2000b-kf1-lg.jpg",
+    "imageNote": "Official Kingston DC2000B series application image. This listing specifies the 480 GB model with a heatsink.",
+    "sourceUrl": "https://www.kingston.com/datasheets/SEDC2000B_en.pdf",
+    "sourceTitle": "Kingston DC2000B PCIe 4.0 NVMe M.2 SSD Data Sheet",
+    "badge": "480 GB · M.2",
+    "description": "480 GB M.2 2280 NVMe SSD with PCIe 4.0 x4, a heatsink, and hardware power-loss protection for server boot storage.",
+    "scenario": "Server boot storage. Confirm M.2 2280 fit, NVMe support, and heatsink clearance.",
+    "specs": [
+      [
+        "Capacity",
+        "480 GB"
+      ],
+      [
+        "Interface",
+        "PCIe 4.0 x4 / NVMe"
+      ],
+      [
+        "Form factor",
+        "M.2 2280 / with heatsink"
+      ],
+      [
+        "NAND flash",
+        "3D TLC"
+      ],
+      [
+        "Sequential read",
+        "Up to 7,000 MB/s"
+      ],
+      [
+        "Sequential write",
+        "Up to 800 MB/s"
+      ],
+      [
+        "Write endurance",
+        "350 TBW"
+      ]
+    ],
+    "tags": [
+      "480 GB",
+      "M.2",
+      "NVMe SSD",
+      "Boot drive",
+      "PLP",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Kingston DC2000B 480 GB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 94
+  },
+  {
+    "id": "kingston-dc3000me-3-84tb",
+    "name": "Kingston DC3000ME 3.84 TB",
+    "brand": "Kingston",
+    "model": "SEDC3000ME/3T8",
+    "category": "storage",
+    "subtype": "nvme-ssd",
+    "categoryLabel": "Server drives · Enterprise NVMe SSD",
+    "image": "assets/products/storage-kingston-dc3000me.jpg",
+    "imageScope": "series",
+    "imageSource": "https://media.kingston.com/kingston/key-features/ktc-keyfeatures-ssd-dc3000me-kf1-lg.jpg",
+    "imageNote": "Official Kingston DC3000ME series application image. The specified capacity corresponds to SEDC3000ME/3T8.",
+    "sourceUrl": "https://www.kingston.com/datasheets/SEDC3000ME_us.pdf",
+    "sourceTitle": "Kingston DC3000ME Enterprise NVMe U.2 SSD Data Sheet",
+    "badge": "3.84 TB · PCIe 5.0",
+    "description": "3.84 TB U.2 enterprise SSD with PCIe 5.0 x4, 3D eTLC NAND, and hardware power-loss protection for high-bandwidth storage.",
+    "scenario": "High-bandwidth storage and database servers. Check 15 mm U.2 bay clearance, PCIe lanes, and cooling.",
+    "specs": [
+      [
+        "Capacity",
+        "3.84 TB"
+      ],
+      [
+        "Interface",
+        "PCIe 5.0 x4 / NVMe"
+      ],
+      [
+        "Form factor",
+        "2.5-inch U.2 / 15 mm"
+      ],
+      [
+        "NAND flash",
+        "3D eTLC"
+      ],
+      [
+        "Sequential read",
+        "Up to 14,000 MB/s"
+      ],
+      [
+        "Sequential write",
+        "Up to 5,800 MB/s"
+      ],
+      [
+        "Write endurance",
+        "7,008 TBW"
+      ]
+    ],
+    "tags": [
+      "3.84 TB",
+      "NVMe SSD",
+      "U.2",
+      "PCIe 5.0",
+      "PLP",
+      "Server drives"
+    ],
+    "price": null,
+    "imageAlt": "Kingston DC3000ME 3.84 TB — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 93
+  },
+  {
+    "id": "intel-x710-da2",
+    "name": "Intel X710-DA2 Dual-Port 10GbE Adapter",
+    "brand": "Intel",
+    "model": "X710-DA2",
+    "category": "accessory",
+    "subtype": "nic",
+    "categoryLabel": "Components · Network adapters",
+    "image": "assets/products/accessory-intel-x710-da2.png",
+    "imageScope": "model",
+    "imageSource": "https://cdrdv2-public.intel.com/641693/Intel%20Ethernet%20Network%20Adapter%20X710.pdf#page=1",
+    "imageNote": "Dual-port adapter image from the Intel X710 product brief. Brackets and board revisions may vary.",
+    "sourceUrl": "https://www.intel.com/content/www/us/en/products/sku/83964/intel-ethernet-converged-network-adapter-x710da2/specifications.html",
+    "sourceTitle": "Intel Ethernet Converged Network Adapter X710-DA2 Specifications",
+    "badge": "Dual port · 10GbE",
+    "description": "Dual-port SFP+ adapter with the Intel X710 controller, PCIe 3.0 x8, and 1/10GbE connectivity for server networking.",
+    "scenario": "10GbE server upgrades. Verify SFP+ transceiver or DAC compatibility, driver support, and PCIe lane availability.",
+    "specs": [
+      [
+        "Ports",
+        "2 × SFP+"
+      ],
+      [
+        "Port speeds",
+        "10 / 1GbE"
+      ],
+      [
+        "Host interface",
+        "PCIe 3.0 x8"
+      ],
+      [
+        "Controller",
+        "Intel X710"
+      ],
+      [
+        "Virtualization",
+        "SR-IOV / VMDq supported"
+      ],
+      [
+        "Bracket",
+        "Low-profile and full-height"
+      ],
+      [
+        "Storage protocols",
+        "iSCSI / NFS"
+      ]
+    ],
+    "tags": [
+      "Network adapter",
+      "10GbE",
+      "SFP+",
+      "PCIe 3.0",
+      "Dual port",
+      "SR-IOV"
+    ],
+    "price": null,
+    "imageAlt": "Intel X710-DA2 Dual-Port 10GbE Adapter",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 92
+  },
+  {
+    "id": "intel-x550-t2",
+    "name": "Intel X550-T2 Dual-Port 10GBASE-T Adapter",
+    "brand": "Intel",
+    "model": "X550-T2",
+    "category": "accessory",
+    "subtype": "nic",
+    "categoryLabel": "Components · Network adapters",
+    "image": "assets/products/accessory-intel-x550-t2.png",
+    "imageScope": "model",
+    "imageSource": "https://cdrdv2-public.intel.com/710174/Intel%20Ethernet%20Converged%20Network%20Adapter%20X550%20Product%20Brief.pdf#page=1",
+    "imageNote": "Dual-port RJ45 adapter image from the Intel X550 product brief.",
+    "sourceUrl": "https://www.intel.com/content/www/us/en/products/sku/88209/intel-ethernet-converged-network-adapter-x550t2/specifications.html",
+    "sourceTitle": "Intel Ethernet Converged Network Adapter X550-T2 Specifications",
+    "badge": "Dual port · 10GBASE-T",
+    "description": "Dual-port RJ45 adapter with PCIe 3.0 x4 and multi-rate Ethernet support up to 10GbE for copper-based server networks.",
+    "scenario": "Server upgrades on copper networks. Check Intel driver documentation for 2.5GbE and 5GbE operating system support.",
+    "specs": [
+      [
+        "Ports",
+        "2 × RJ45"
+      ],
+      [
+        "Port speeds",
+        "10G / 5G / 2.5G / 1G / 100M"
+      ],
+      [
+        "Host interface",
+        "PCIe 3.0 x4"
+      ],
+      [
+        "Controller",
+        "Intel X550"
+      ],
+      [
+        "Cabling",
+        "Cat6 up to 55 m / Cat6A up to 100 m"
+      ],
+      [
+        "Virtualization",
+        "SR-IOV / VMDq supported"
+      ],
+      [
+        "NBASE-T support",
+        "Linux only, per Intel documentation"
+      ]
+    ],
+    "tags": [
+      "Network adapter",
+      "10GbE",
+      "RJ45",
+      "Copper Ethernet",
+      "PCIe 3.0",
+      "Dual port"
+    ],
+    "price": null,
+    "imageAlt": "Intel X550-T2 Dual-Port 10GBASE-T Adapter",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 91
+  },
+  {
+    "id": "nvidia-connectx5-mcx512a-acat",
+    "name": "NVIDIA ConnectX-5 Dual-Port 25GbE Adapter",
+    "brand": "NVIDIA Mellanox",
+    "model": "MCX512A-ACAT",
+    "category": "accessory",
+    "subtype": "nic",
+    "categoryLabel": "Components · Network adapters",
+    "image": "assets/products/accessory-nvidia-connectx5.png",
+    "imageScope": "series",
+    "imageSource": "https://network.nvidia.com/sites/default/files/doc-2020/pb-connectx-5-en-card.pdf#page=1",
+    "imageNote": "NVIDIA/Mellanox ConnectX-5 EN series image from the product brief listing MCX512A-ACAT. Ports, brackets, and board revisions vary by model.",
+    "sourceUrl": "https://networking-docs.nvidia.com/connectx5enhw/specifications",
+    "sourceTitle": "NVIDIA ConnectX-5 MCX512A-ACAT / ACUT Specifications",
+    "badge": "Dual port · 25GbE",
+    "description": "Dual-port SFP28 adapter with 1/10/25GbE connectivity and a PCIe 3.0 x8 host interface for data center servers.",
+    "scenario": "25GbE server interconnects. Match switch ports, transceivers or DACs, firmware, and drivers.",
+    "specs": [
+      [
+        "Ports",
+        "2 × SFP28"
+      ],
+      [
+        "Port speeds",
+        "1 / 10 / 25GbE"
+      ],
+      [
+        "Host interface",
+        "PCIe 3.0 x8"
+      ],
+      [
+        "Board dimensions",
+        "68.90 × 142.24 mm"
+      ],
+      [
+        "Supply voltage",
+        "12 V"
+      ],
+      [
+        "Typical power",
+        "9.5 W (passive cables)"
+      ],
+      [
+        "Operating temperature",
+        "0 to 55 °C"
+      ]
+    ],
+    "tags": [
+      "Network adapter",
+      "25GbE",
+      "SFP28",
+      "ConnectX-5",
+      "Dual port",
+      "PCIe 3.0"
+    ],
+    "price": null,
+    "imageAlt": "NVIDIA ConnectX-5 Dual-Port 25GbE Adapter — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 90
+  },
+  {
+    "id": "broadcom-megaraid-9560-8i",
+    "name": "Broadcom MegaRAID 9560-8i 4 GB",
+    "brand": "Broadcom",
+    "model": "9560-8i / 05-50077-01",
+    "category": "accessory",
+    "subtype": "raid",
+    "categoryLabel": "Components · RAID controllers",
+    "image": "assets/products/accessory-broadcom-9560-8i.jpg",
+    "imageScope": "model",
+    "imageSource": "https://www.broadcom.com/media/blt4ac44e0e6c6d8341/blt18448b0755572f11/604f5b6ef3117249de42f092/megaraid_9560-8i_angle_oblique.jpeg",
+    "imageNote": "Official Broadcom MegaRAID 9560-8i product image.",
+    "sourceUrl": "https://docs.broadcom.com/doc/MegaRAID-9500-Tri-Mode-Storage-Adapters",
+    "sourceTitle": "Broadcom MegaRAID 9500 Series Product Brief",
+    "badge": "Tri-mode · 4 GB",
+    "description": "PCIe 4.0 x8 tri-mode RAID controller with eight internal lanes and a 4 GB cache for SAS, SATA, and NVMe storage.",
+    "scenario": "Server storage arrays. NVMe requires compatible tri-mode cables and backplanes; confirm the cache protection module when configuring the controller.",
+    "specs": [
+      [
+        "Host interface",
+        "PCIe 4.0 x8"
+      ],
+      [
+        "Internal lanes",
+        "8"
+      ],
+      [
+        "Connector",
+        "1 × x8 SFF-8654"
+      ],
+      [
+        "Storage interfaces",
+        "12 Gb/s SAS / 6 Gb/s SATA / PCIe 4.0 NVMe"
+      ],
+      [
+        "Cache",
+        "4 GB"
+      ],
+      [
+        "RAID levels",
+        "0 / 00 / 1 / 10 / 5 / 50 / 6 / 60"
+      ],
+      [
+        "Controller",
+        "SAS3908"
+      ]
+    ],
+    "tags": [
+      "RAID controller",
+      "Tri-mode",
+      "SAS",
+      "SATA",
+      "NVMe",
+      "PCIe 4.0"
+    ],
+    "price": null,
+    "imageAlt": "Broadcom MegaRAID 9560-8i 4 GB",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 89
+  },
+  {
+    "id": "kingston-ksm32rs4-32mfr",
+    "name": "Kingston Server Premier 32 GB DDR4",
+    "brand": "Kingston",
+    "model": "KSM32RS4/32MFR",
+    "category": "accessory",
+    "subtype": "memory",
+    "categoryLabel": "Components · ECC RDIMM memory",
+    "image": "assets/products/accessory-kingston-ksm32rs4.jpg",
+    "imageScope": "series",
+    "imageSource": "https://media.kingston.com/kingston/headers/ktc-header-category-memory-server-premier-hd-md.jpg",
+    "imageNote": "Official Kingston Server Premier series group image. Specifications apply to KSM32RS4/32MFR; this is not a label photograph of that individual module.",
+    "sourceUrl": "https://www.kingston.com/datasheets/KSM32RS4_32MFR.pdf",
+    "sourceTitle": "Kingston KSM32RS4/32MFR Memory Module Specifications",
+    "badge": "32 GB · ECC RDIMM",
+    "description": "32 GB DDR4-3200 ECC RDIMM with 1Rx4 organization, CL22 timings, and a 288-pin connector for compatible server platforms.",
+    "scenario": "DDR4 ECC RDIMM expansion. Check the server QVL, processor memory population rules, and existing DIMM organization.",
+    "specs": [
+      [
+        "Capacity",
+        "32 GB"
+      ],
+      [
+        "Type",
+        "DDR4 ECC Registered DIMM"
+      ],
+      [
+        "Data rate",
+        "3200 MT/s"
+      ],
+      [
+        "Rank organization",
+        "1Rx4"
+      ],
+      [
+        "Timings",
+        "CL22 / 22-22-22"
+      ],
+      [
+        "Voltage",
+        "1.2 V"
+      ],
+      [
+        "Pin count",
+        "288-pin"
+      ]
+    ],
+    "tags": [
+      "Server memory",
+      "DDR4",
+      "32 GB",
+      "ECC",
+      "RDIMM",
+      "3200 MT/s"
+    ],
+    "price": null,
+    "imageAlt": "Kingston Server Premier 32 GB DDR4 — series image",
+    "verifiedAt": "2026-10-16",
+    "colors": [],
+    "newRank": 88
+  }
+]

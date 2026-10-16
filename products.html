@@ -1,61 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | TrueCore Global</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore servers, network switches, enterprise drives and components from leading manufacturers. Compare specific models, review specifications and find the right hardware for your deployment." />
+  <meta name="theme-color" content="#090c12" />
+  <title>Products · chenglian</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="catalog.css" />
+<link rel="preload" href="assets/fonts/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="typography.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
-    
-    <nav class="bg-white shadow-md p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-700">TrueCore Global</h1>
-            <div class="space-x-6">
-                <a href="index.html" class="text-gray-600 hover:text-blue-500 transition">Home</a>
-                <a href="products.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">Products</a>
-                <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="py-16 max-w-6xl mx-auto px-4 flex-grow">
-        <h2 class="text-3xl font-bold text-center mb-12">In-Stock Used Network Equipment</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
-                <img src="" alt="Tested Used Enterprise Router" class="w-full h-64 object-cover bg-gray-200">
-                <div class="p-8 flex-grow flex flex-col">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Enterprise Routers</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">Fully tested routing solutions, ready for deployment. Ideal for medium-sized corporate networks needing stable connectivity.</p>
-                    <ul class="list-none text-gray-700 mb-8 space-y-2">
-                        <li class="flex items-center">✅ <span class="ml-2">Cisco ISR 4000 Series</span></li>
-                        <li class="flex items-center">✅ <span class="ml-2">Huawei AR Series</span></li>
-                        <li class="flex items-center">✅ <span class="ml-2">100% Port Tested & Reset</span></li>
-                    </ul>
-                    <a href="contact.html" class="text-center block w-full bg-blue-600 text-white font-bold py-3 px-4 rounded hover:bg-blue-700 transition">Request Price List</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col">
-                <img src="" alt="Refurbished Network Switch" class="w-full h-64 object-cover bg-gray-200">
-                <div class="p-8 flex-grow flex flex-col">
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Network Switches</h3>
-                    <p class="text-gray-600 mb-6 flex-grow">High-performance Core and Edge switches to ensure seamless intranet speeds for growing businesses.</p>
-                    <ul class="list-none text-gray-700 mb-8 space-y-2">
-                        <li class="flex items-center">✅ <span class="ml-2">Catalyst 9200/9300 Series</span></li>
-                        <li class="flex items-center">✅ <span class="ml-2">Data Center Switches</span></li>
-                        <li class="flex items-center">✅ <span class="ml-2">PoE / PoE+ Options Available</span></li>
-                    </ul>
-                    <a href="contact.html" class="text-center block w-full bg-blue-600 text-white font-bold py-3 px-4 rounded hover:bg-blue-700 transition">Request Price List</a>
-                </div>
-            </div>
-        </div>
+<body data-page="products">
+  <div id="site-header"></div>
+  <main id="main-content">
+    <section class="catalog-intro container" aria-labelledby="pageTitle">
+      <nav class="catalog-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i data-lucide="chevron-right" aria-hidden="true"></i><span aria-current="page">Products</span></nav>
+      <div class="catalog-intro-row">
+        <div><p class="eyebrow">PRODUCTS & COMPONENTS</p><h1 id="pageTitle">Product catalog.</h1><p class="catalog-intro-copy">Compare servers, switches, enterprise drives and components from established manufacturers.</p></div>
+        <a class="text-link catalog-help-link" href="contact.html?type=product#formTitle">Selection support <i data-lucide="arrow-up-right"></i></a>
+      </div>
     </section>
-
-    <footer class="bg-slate-900 text-gray-400 text-center py-8 mt-auto">
-        <p>&copy; 2026 TrueCore Global. Providing reliable used network equipment worldwide.</p>
-    </footer>
-
+    <section class="container catalog-section" id="catalog" aria-label="Browse products">
+      <div class="catalog-categories" role="group" aria-label="Choose a product category">
+        <button type="button" data-category="all" aria-pressed="true" class="is-active"><i data-lucide="layout-grid"></i><span>All products</span><span class="category-count" data-category-count="all"></span></button>
+        <button type="button" data-category="server" aria-pressed="false"><i data-lucide="server"></i><span>Servers</span></button>
+        <button type="button" data-category="switch" aria-pressed="false"><i data-lucide="network"></i><span>Switches</span></button>
+        <button type="button" data-category="storage" aria-pressed="false"><i data-lucide="hard-drive"></i><span>Server drives</span></button>
+        <button type="button" data-category="accessory" aria-pressed="false"><i data-lucide="circuit-board"></i><span>Components</span></button>
+      </div>
+      <div class="catalog-toolbar">
+        <label class="catalog-search" for="catalogSearchInput"><i data-lucide="search" aria-hidden="true"></i><span class="sr-only">Search brands, models, capacities or specifications</span><input type="search" id="catalogSearchInput" placeholder="Search by model, brand or specification" autocomplete="off" maxlength="120" /></label>
+        <div class="catalog-toolbar-end"><button type="button" class="catalog-favorites-toggle" id="favoritesFilterButton" aria-pressed="false"><i data-lucide="heart"></i><span>Saved products</span></button><label class="catalog-sort" for="sortSelect"><span class="sr-only">Sort order</span><select id="sortSelect"><option value="featured">Featured</option><option value="name">Name: A–Z</option><option value="category">Category</option></select><i data-lucide="chevron-down" aria-hidden="true"></i></label></div>
+      </div>
+      <div class="catalog-facets"><label for="brandSelect"><span>Brand</span><select id="brandSelect"><option value="all">All brands</option></select></label><label for="typeSelect"><span>Product type</span><select id="typeSelect"><option value="all">All types</option></select></label><a id="storageCrossLink" href="products.html?category=storage" hidden>Explore server drives <i data-lucide="arrow-up-right"></i></a></div>
+      <div class="catalog-result-row"><p id="resultsSummary" role="status" aria-live="polite">Loading products…</p><button id="clearFiltersButton" type="button" class="catalog-reset" hidden>Reset filters <i data-lucide="rotate-ccw"></i></button></div>
+      <div id="productGrid" class="catalog-grid"></div>
+      <div id="emptyState" class="catalog-empty" hidden><div class="catalog-empty-icon"><i data-lucide="search-x"></i></div><h2 id="emptyTitle">No matching products</h2><p id="emptyCopy">Try a different keyword or clear the filters to see all products.</p><button class="button button-primary" type="button" id="emptyResetButton">View all products</button></div>
+      <nav class="catalog-pagination" id="catalogPagination" aria-label="Product pagination"></nav>
+      <p class="catalog-example-note"><i data-lucide="info" aria-hidden="true"></i> Specifications are based on manufacturer documentation, linked on each product page. Contact us to confirm configuration, compatibility, availability and pricing.</p>
+      <noscript><p class="catalog-empty">Enable JavaScript to filter, save and compare products.</p></noscript>
+    </section>
+    <section class="catalog-assistance container" aria-labelledby="catalogHelpTitle"><div class="catalog-assistance-icon"><i data-lucide="messages-square"></i></div><div><p class="eyebrow">CONFIGURATION SUPPORT</p><h2 id="catalogHelpTitle">Need help specifying a system?</h2><p>Share your application, existing equipment and target capacity. We can help define a suitable configuration.</p></div><a class="button button-outline" href="contact.html?type=product#formTitle">Discuss your project <i data-lucide="arrow-right"></i></a></section>
+  </main>
+  <div id="site-footer"></div>
+  <aside class="compare-bar" id="compareBar" aria-label="Products selected for comparison" hidden><div class="compare-bar-inner"><div class="compare-bar-heading"><strong>Compare products <span id="compareCount">0/3</span></strong><span>Select up to 3 products</span></div><div class="compare-selection" id="compareSelection"></div><div class="compare-bar-actions"><button class="catalog-reset" type="button" id="clearCompareButton">Clear</button><button class="button button-primary" type="button" id="openCompareButton">Compare <i data-lucide="columns-3"></i></button></div></div></aside>
+  <dialog class="compare-dialog" id="compareDialog" aria-labelledby="compareTitle"><div class="compare-dialog-header"><div><p class="eyebrow">PRODUCT COMPARISON</p><h2 id="compareTitle">Compare specifications.</h2></div><button class="catalog-icon-button" type="button" id="closeCompareButton" aria-label="Close product comparison"><i data-lucide="x"></i></button></div><p class="compare-dialog-note" id="compareHint">Compare specifications side by side to find the right fit.</p><div class="compare-table-wrap" tabindex="0" role="region" aria-label="Product comparison table; scroll horizontally for more columns"><table class="compare-table" id="compareTable"></table></div><p class="catalog-example-note">Specifications depend on the model and configuration. A dash indicates an unlisted specification. Optional features and maximum capabilities are not standard configurations.</p></dialog>
+  <script src="assets/lucide.min.js"></script><script src="product-data.js"></script><script src="site.js"></script><script src="products.js"></script>
 </body>
 </html>
+

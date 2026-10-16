@@ -1,0 +1,14 @@
+{
+  "name": "truecore-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "chenglian enterprise hardware catalog and services website",
+  "scripts": {
+    "build": "node compile-products.cjs && node build.cjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check:deploy": "wrangler deploy --dry-run"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "wrangler": "4.151.0" }
+}

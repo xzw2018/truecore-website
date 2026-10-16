@@ -1,0 +1,592 @@
+[
+  {
+    "id": "dell-poweredge-r350",
+    "name": "Dell PowerEdge R350",
+    "brand": "Dell",
+    "model": "PowerEdge R350",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r350.png",
+    "imageAlt": "Dell PowerEdge R350",
+    "imageSource": "https://i.dell.com/sites/csdocuments/Product_Docs/en/Dell-EMC-PowerEdge-R350-Spec-sheet.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R350 specification sheet, page 1; original image width: 926 px. Bezel and internal components vary by configuration.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/Product_Docs/en/Dell-EMC-PowerEdge-R350-Spec-sheet.pdf",
+    "sourceTitle": "Dell PowerEdge R350 Spec Sheet",
+    "verifiedAt": "2026-10-16",
+    "badge": "1U single socket",
+    "description": "Single-socket 1U server with ECC DDR4 memory and optional hot-swap storage for branch offices and everyday business applications.",
+    "scenario": "Branch offices, file sharing, and core business applications.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / single socket"
+      ],
+      [
+        "Processors",
+        "Intel Xeon E-2300, up to 8 cores; Pentium options also available"
+      ],
+      [
+        "Memory",
+        "4 DDR4 ECC UDIMM slots, up to 128 GB"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 4 × 3.5-inch or 8 × 2.5-inch SAS/SATA drives"
+      ],
+      [
+        "Networking",
+        "Onboard 2 × 1GbE"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "1U",
+      "Single socket",
+      "DDR4",
+      "Branch office"
+    ],
+    "colors": [],
+    "newRank": 100
+  },
+  {
+    "id": "dell-poweredge-r450",
+    "name": "Dell PowerEdge R450",
+    "brand": "Dell",
+    "model": "PowerEdge R450",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r450.png",
+    "imageAlt": "Dell PowerEdge R450",
+    "imageSource": "https://i.dell.com/sites/csdocuments/Product_Docs/en/R450-spec-sheet.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R450 specification sheet, page 1; original image: 283 × 133 px. Exact model image with limited detail; not upscaled.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/Product_Docs/en/R450-spec-sheet.pdf",
+    "sourceTitle": "Dell PowerEdge R450 Spec Sheet",
+    "verifiedAt": "2026-10-16",
+    "badge": "1U dual socket",
+    "description": "Dual-socket 1U server with DDR4 memory, PCIe Gen4 expansion, and SAS/SATA storage options for infrastructure services and light virtualization.",
+    "scenario": "Small and midsize IT environments, infrastructure services, and light virtualization.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "Up to 2 × 3rd Gen Intel Xeon Scalable processors, up to 24 cores each"
+      ],
+      [
+        "Memory",
+        "16 DDR4 RDIMM slots, up to 1 TB / 2933 MT/s"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 4 × 3.5-inch or 8 × 2.5-inch SAS/SATA drives"
+      ],
+      [
+        "Expansion",
+        "2 PCIe Gen4 slots; OCP 3.0 networking options"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "1U",
+      "Dual socket",
+      "DDR4",
+      "Virtualization"
+    ],
+    "colors": [],
+    "newRank": 99
+  },
+  {
+    "id": "dell-poweredge-r550",
+    "name": "Dell PowerEdge R550",
+    "brand": "Dell",
+    "model": "PowerEdge R550",
+    "category": "server",
+    "subtype": "rack-2u",
+    "categoryLabel": "Servers · 2U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r550.png",
+    "imageAlt": "Dell PowerEdge R550",
+    "imageSource": "https://i.dell.com/sites/csdocuments/Product_Docs/en/R550-spec-sheet.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R550 specification sheet, page 1; original image width: 725 px. The drive bays and installed drives show one configuration.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/Product_Docs/en/R550-spec-sheet.pdf",
+    "sourceTitle": "Dell PowerEdge R550 Spec Sheet",
+    "verifiedAt": "2026-10-16",
+    "badge": "2U dual socket",
+    "description": "Dual-socket 2U server with DDR4 memory and multiple SAS/SATA drive configurations for business applications and local storage.",
+    "scenario": "Business applications, file services, and light virtualization.",
+    "specs": [
+      [
+        "Form factor",
+        "2U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "Up to 2 × 3rd Gen Intel Xeon Scalable processors, up to 24 cores each"
+      ],
+      [
+        "Memory",
+        "16 DDR4 RDIMM slots, up to 1 TB / 2933 MT/s"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 16 × 2.5-inch or 8 × 3.5-inch SAS/SATA drives"
+      ],
+      [
+        "Expansion",
+        "3 PCIe Gen4 slots + 1 PCIe Gen3 slot"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "2U",
+      "Dual socket",
+      "DDR4",
+      "SAS/SATA"
+    ],
+    "colors": [],
+    "newRank": 98
+  },
+  {
+    "id": "dell-poweredge-r650",
+    "name": "Dell PowerEdge R650",
+    "brand": "Dell",
+    "model": "PowerEdge R650",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r650.png",
+    "imageAlt": "Dell PowerEdge R650",
+    "imageSource": "https://i.dell.com/sites/csdocuments/Product_Docs/en/poweredge-r650-spec-sheet.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R650 specification sheet, page 1; original image width: 843 px. Shown with the front bezel installed.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/Product_Docs/en/poweredge-r650-spec-sheet.pdf",
+    "sourceTitle": "Dell PowerEdge R650 Spec Sheet",
+    "verifiedAt": "2026-10-16",
+    "badge": "High-density 1U",
+    "description": "Dual-socket 1U server with 32 DDR4 DIMM slots and SAS, SATA, or NVMe storage for dense compute environments.",
+    "scenario": "High-density virtualization, databases, and standardized data center deployments.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "Up to 2 × 3rd Gen Intel Xeon Scalable processors, up to 40 cores each"
+      ],
+      [
+        "Memory",
+        "32 DDR4 DIMM slots, up to 3200 MT/s"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 10 × 2.5-inch SAS/SATA/NVMe drives; 3.5-inch chassis also available"
+      ],
+      [
+        "Rear drive bays",
+        "Options for up to 2 × 2.5-inch SAS/SATA/NVMe drives"
+      ],
+      [
+        "Expansion",
+        "PCIe Gen4; optional OCP 3.0 network adapter"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "1U",
+      "Dual socket",
+      "DDR4",
+      "NVMe",
+      "Database"
+    ],
+    "colors": [],
+    "newRank": 97
+  },
+  {
+    "id": "dell-poweredge-r660",
+    "name": "Dell PowerEdge R660",
+    "brand": "Dell",
+    "model": "PowerEdge R660",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r660.png",
+    "imageAlt": "Dell PowerEdge R660",
+    "imageSource": "https://i.dell.com/sites/csdocuments/Product_Docs/en/poweredge-r660-technical-guide.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R660 technical guide, page 10; original front-view image width: 1650 px. Shows the 8 × 2.5-inch chassis; other drive configurations are available.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/Product_Docs/en/poweredge-r660-technical-guide.pdf",
+    "sourceTitle": "Dell PowerEdge R660 Technical Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "1U · DDR5",
+    "description": "Dual-socket 1U server with DDR5 memory, PCIe Gen5 expansion, and configurable storage and networking for enterprise workloads.",
+    "scenario": "High-density virtualization, database analytics, and general-purpose enterprise applications.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "4th Gen Intel Xeon Scalable configuration: up to 2 processors, up to 56 cores each"
+      ],
+      [
+        "Memory",
+        "32 DDR5 RDIMM slots, up to 8 TB depending on configuration"
+      ],
+      [
+        "Front drive bays",
+        "8 or 10 × 2.5-inch SAS/SATA/NVMe chassis options"
+      ],
+      [
+        "Rear drive bays",
+        "Options for up to 2 × 2.5-inch drives"
+      ],
+      [
+        "Expansion",
+        "Up to 3 PCIe slots, with Gen4 / Gen5 configurations"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "1U",
+      "Dual socket",
+      "DDR5",
+      "PCIe 5.0",
+      "NVMe"
+    ],
+    "colors": [],
+    "newRank": 96
+  },
+  {
+    "id": "dell-poweredge-r750",
+    "name": "Dell PowerEdge R750",
+    "brand": "Dell",
+    "model": "PowerEdge R750",
+    "category": "server",
+    "subtype": "rack-2u",
+    "categoryLabel": "Servers · 2U rack",
+    "price": null,
+    "image": "assets/products/server-dell-poweredge-r750.png",
+    "imageAlt": "Dell PowerEdge R750 — rear view",
+    "imageSource": "https://i.dell.com/sites/csdocuments/product_docs/en/poweredge-r750-technical-guide.pdf",
+    "imageScope": "model",
+    "imageNote": "Dell R750 technical guide, page 10, figure 10; original rear-view image width: 1630 px. Shows a configuration with two rear drive bays, six PCIe slots, and power supplies.",
+    "sourceUrl": "https://i.dell.com/sites/csdocuments/product_docs/en/poweredge-r750-technical-guide.pdf",
+    "sourceTitle": "Dell PowerEdge R750 Technical Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "2U expansion",
+    "description": "Dual-socket 2U server with DDR4 memory and up to eight PCIe Gen4 slots for compute and storage workloads.",
+    "scenario": "Virtualization, database analytics, and storage-intensive enterprise applications.",
+    "specs": [
+      [
+        "Form factor",
+        "2U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "Up to 2 × 3rd Gen Intel Xeon Scalable processors, up to 40 cores each"
+      ],
+      [
+        "Memory",
+        "32 DDR4 DIMM slots, up to 3200 MT/s"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 24 × 2.5-inch or 12 × 3.5-inch drives"
+      ],
+      [
+        "Storage interfaces",
+        "SAS/SATA/NVMe options, depending on backplane and controller configuration"
+      ],
+      [
+        "Expansion",
+        "Up to 8 PCIe Gen4 slots, depending on riser configuration"
+      ],
+      [
+        "Management",
+        "iDRAC9 / OpenManage"
+      ]
+    ],
+    "tags": [
+      "Dell",
+      "2U",
+      "Dual socket",
+      "DDR4",
+      "PCIe 4.0",
+      "Database"
+    ],
+    "colors": [],
+    "newRank": 95,
+    "imageView": "rear"
+  },
+  {
+    "id": "lenovo-thinksystem-sr650-v3",
+    "name": "Lenovo ThinkSystem SR650 V3",
+    "brand": "Lenovo",
+    "model": "ThinkSystem SR650 V3",
+    "category": "server",
+    "subtype": "rack-2u",
+    "categoryLabel": "Servers · 2U rack",
+    "price": null,
+    "image": "assets/products/server-lenovo-thinksystem-sr650-v3.png",
+    "imageAlt": "Lenovo ThinkSystem SR650 V3",
+    "imageSource": "https://lenovopress.lenovo.com/assets/images/LP1601/SR650%20V3%20Shanghai%20front%20angled%20left.jpg",
+    "imageScope": "model",
+    "imageNote": "Lenovo SR650 V3 product guide, figure 1; original image width: 1500 px. Shows front 2.5-inch drive bays and the SR650 V3 chassis label.",
+    "sourceUrl": "https://lenovopress.lenovo.com/lp1601-thinksystem-sr650-v3-server",
+    "sourceTitle": "Lenovo ThinkSystem SR650 V3 Product Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "2U · DDR5",
+    "description": "Dual-socket 2U server with DDR5 memory, PCIe Gen5 expansion, and flexible drive configurations for virtualization and enterprise storage.",
+    "scenario": "Enterprise virtualization, databases, and software-defined storage.",
+    "specs": [
+      [
+        "Form factor",
+        "2U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "1–2 × 4th / 5th Gen Intel Xeon Scalable processors"
+      ],
+      [
+        "Memory",
+        "32 DDR5 DIMM slots; up to 8 TB in a dual-socket configuration"
+      ],
+      [
+        "Memory speed",
+        "Up to 5600 MT/s at 1DPC with 5th Gen processors and compatible RDIMMs"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 24 × 2.5-inch or 12 × 3.5-inch drives"
+      ],
+      [
+        "Expansion",
+        "PCIe Gen5 and OCP 3.0 network adapter support"
+      ],
+      [
+        "Management",
+        "Lenovo XClarity Controller 2"
+      ]
+    ],
+    "tags": [
+      "Lenovo",
+      "2U",
+      "Dual socket",
+      "DDR5",
+      "PCIe 5.0",
+      "Virtualization"
+    ],
+    "colors": [],
+    "newRank": 94
+  },
+  {
+    "id": "lenovo-thinksystem-sr630-v3",
+    "name": "Lenovo ThinkSystem SR630 V3",
+    "brand": "Lenovo",
+    "model": "ThinkSystem SR630 V3",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-lenovo-thinksystem-sr630-v3.png",
+    "imageAlt": "Lenovo ThinkSystem SR630 V3",
+    "imageSource": "https://lenovopress.lenovo.com/assets/images/LP1600/SR630%20V3%20New%20York%2010x25%20front%20angled%20left.jpg",
+    "imageScope": "model",
+    "imageNote": "Lenovo SR630 V3 product guide, figure 1; original image width: 1500 px. Shows the 10 × 2.5-inch chassis and the SR630 V3 label.",
+    "sourceUrl": "https://lenovopress.lenovo.com/lp1600-thinksystem-sr630-v3-server",
+    "sourceTitle": "Lenovo ThinkSystem SR630 V3 Product Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "1U · DDR5",
+    "description": "Dual-socket 1U server supporting 4th or 5th Gen Intel Xeon Scalable processors and 32 DDR5 DIMM slots.",
+    "scenario": "Data center virtualization, enterprise applications, databases, and network services.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / dual socket"
+      ],
+      [
+        "Processors",
+        "1–2 × 4th / 5th Gen Intel Xeon Scalable processors"
+      ],
+      [
+        "Memory",
+        "32 DDR5 DIMM slots, up to 8 TB (32 × 256 GB)"
+      ],
+      [
+        "Front drive bays",
+        "Options for up to 10 × 2.5-inch, 4 × 3.5-inch, or EDSFF chassis"
+      ],
+      [
+        "Rear drive bays",
+        "Optional 2 × 2.5-inch drives, depending on chassis configuration"
+      ],
+      [
+        "Expansion",
+        "PCIe Gen5 and OCP 3.0 networking expansion"
+      ],
+      [
+        "Management",
+        "Lenovo XClarity Controller 2"
+      ]
+    ],
+    "tags": [
+      "Lenovo",
+      "1U",
+      "Dual socket",
+      "DDR5",
+      "NVMe",
+      "Database"
+    ],
+    "colors": [],
+    "newRank": 93
+  },
+  {
+    "id": "lenovo-thinksystem-sr250-v3",
+    "name": "Lenovo ThinkSystem SR250 V3",
+    "brand": "Lenovo",
+    "model": "ThinkSystem SR250 V3",
+    "category": "server",
+    "subtype": "rack-1u",
+    "categoryLabel": "Servers · 1U rack",
+    "price": null,
+    "image": "assets/products/server-lenovo-thinksystem-sr250-v3.png",
+    "imageAlt": "Lenovo ThinkSystem SR250 V3",
+    "imageSource": "https://lenovopress.lenovo.com/assets/images/LP1802/SR250%20V3%20Cayuga%20front%20angled%20left%204x35.jpg",
+    "imageScope": "model",
+    "imageNote": "Lenovo SR250 V3 product guide, figure 1; original image width: 1500 px. Shows the chassis with 4 × 3.5-inch hot-swap bays.",
+    "sourceUrl": "https://lenovopress.lenovo.com/lp1802-thinksystem-sr250-v3-server",
+    "sourceTitle": "Lenovo ThinkSystem SR250 V3 Product Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "1U single socket · DDR5",
+    "description": "Single-socket 1U server with ECC DDR5 memory, optional hot-swap storage, and remote management for branch offices and retail systems.",
+    "scenario": "Branch offices, retail systems, entry-level virtualization, and web services.",
+    "specs": [
+      [
+        "Form factor",
+        "1U rack / single socket"
+      ],
+      [
+        "Processors",
+        "Intel Xeon 6300 series or Xeon E-2400; Pentium options also available"
+      ],
+      [
+        "Memory",
+        "4 DDR5 ECC UDIMM slots, up to 128 GB / 4800 MT/s"
+      ],
+      [
+        "Drive bays",
+        "Up to 10 × 2.5-inch or 4 × 3.5-inch drives"
+      ],
+      [
+        "Expansion",
+        "Up to 3 PCIe slots, including PCIe Gen5 options"
+      ],
+      [
+        "Networking",
+        "Onboard dual-port 1GbE"
+      ],
+      [
+        "Management",
+        "Lenovo XClarity Controller 2"
+      ]
+    ],
+    "tags": [
+      "Lenovo",
+      "1U",
+      "Single socket",
+      "DDR5",
+      "Branch office"
+    ],
+    "colors": [],
+    "newRank": 92
+  },
+  {
+    "id": "lenovo-thinksystem-st250-v3",
+    "name": "Lenovo ThinkSystem ST250 V3",
+    "brand": "Lenovo",
+    "model": "ThinkSystem ST250 V3",
+    "category": "server",
+    "subtype": "tower",
+    "categoryLabel": "Servers · Tower",
+    "price": null,
+    "image": "assets/products/server-lenovo-thinksystem-st250-v3.png",
+    "imageAlt": "Lenovo ThinkSystem ST250 V3",
+    "imageSource": "https://lenovopress.lenovo.com/assets/images/LP1803/ST250%20V3%20front%20angled%20right%208x35%20HS.jpg",
+    "imageScope": "model",
+    "imageNote": "Lenovo ST250 V3 product guide; original image: 756 × 1200 px. Shows a tower with 8 × 3.5-inch hot-swap bays and an optional optical drive.",
+    "sourceUrl": "https://lenovopress.lenovo.com/lp1803-thinksystem-st250-v3-server",
+    "sourceTitle": "Lenovo ThinkSystem ST250 V3 Product Guide",
+    "verifiedAt": "2026-10-16",
+    "badge": "Single-socket tower · DDR5",
+    "description": "Single-socket tower server with DDR5 memory and flexible drive options, with 4U rack installation available through an optional kit.",
+    "scenario": "Small businesses, branch offices, retail sites, and edge applications.",
+    "specs": [
+      [
+        "Form factor",
+        "Single-socket tower; converts to 4U rack installation with the appropriate kit"
+      ],
+      [
+        "Processors",
+        "Intel Xeon 6300 series or Xeon E-2400; Pentium options also available"
+      ],
+      [
+        "Memory",
+        "4 DDR5 ECC UDIMM slots, up to 128 GB / 4800 MT/s"
+      ],
+      [
+        "Drive bays",
+        "Up to 8 × 3.5-inch or 16 × 2.5-inch drives; mixed configurations also available"
+      ],
+      [
+        "Expansion",
+        "4 PCIe slots, including 1 PCIe Gen5 slot"
+      ],
+      [
+        "Management",
+        "Lenovo XClarity Controller 2"
+      ]
+    ],
+    "tags": [
+      "Lenovo",
+      "Tower",
+      "Single socket",
+      "DDR5",
+      "Branch office"
+    ],
+    "colors": [],
+    "newRank": 91
+  }
+]
