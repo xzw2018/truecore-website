@@ -50,4 +50,4 @@ The contact form posts to the same-origin `/api/enquiry` Worker endpoint. It for
 - On failure, activation pending or an uncertain result, the form preserves a copy for download and direct email.
 - FormSubmit handles email delivery and retains submissions for 30 days under its [published policy](https://formsubmit.co/documentation). Avoid including passwords or other secrets in enquiries.
 
-Run `npm test` for the endpoint tests and `npm run check:deploy` to validate the Worker bundle. When adding a custom domain, update `PUBLIC_SITE_ORIGIN` in `wrangler.jsonc`, then test the enquiry flow on that domain.
+Run `npm test` for endpoint and actual workerd runtime tests; all provider calls in tests are intercepted so no emails are sent. Run `npm run check:deploy` to validate the Worker bundle. When adding a custom domain, update `PUBLIC_SITE_ORIGIN` in `wrangler.jsonc`, then test the enquiry flow on that domain.

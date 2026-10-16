@@ -120,7 +120,8 @@ export async function handleEnquiry(request, env, fetchEmail = fetch) {
       headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: expectedOrigin, Referer: `${expectedOrigin}/contact` },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(18000),
-      redirect: 'error',
+      // workerd supports manual/follow only; reject redirects without forwarding enquiry data.
+      redirect: 'manual',
     });
     if (!upstream.ok) return failure('delivery_unconfirmed', 'Email submission could not be confirmed. Keep your enquiry copy and contact us directly.', 502);
     let receipt;

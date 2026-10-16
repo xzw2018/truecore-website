@@ -60,7 +60,7 @@ for (const success of [true, 'true']) {
     assert.equal(sends[0].payload.Reference, body.reference);
     assert.equal(sends[0].url, RECIPIENT_URL);
     assert.equal(sends[0].options.method, 'POST');
-    assert.equal(sends[0].options.redirect, 'error');
+    assert.equal(sends[0].options.redirect, 'manual');
     assert.ok(sends[0].options.signal instanceof AbortSignal);
     assert.deepEqual(rateCalls, [{ key: 'truecore-website:enquiry:192.0.2.12' }]);
   });
@@ -102,12 +102,13 @@ test('activation message takes precedence over a truthy provider success', async
   assert.equal(body.ok, false);
 });
 
-for (const status of [400, 403, 429, 500, 503]) {
+for (const status of [301, 302, 303, 307, 308, 400, 403, 429, 500, 503]) {
   test(`provider HTTP ${status} is unconfirmed even with a success-looking body`, async () => {
-    const { response, body } = await run(enquiry(), () => Response.json({ success: true }, { status }));
+    const { response, body, sends } = await run(enquiry(), () => Response.json({ success: true }, { status, headers: { Location: 'https://example.com/redirect' } }));
     assert.equal(response.status, 502);
     assert.equal(body.ok, false);
     assert.equal(body.code, 'delivery_unconfirmed');
+    assert.equal(sends.length, 1);
   });
 }
 
