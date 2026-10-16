@@ -39,4 +39,15 @@ The dashboard may also use `npm run build` as an explicit build command; Wrangle
 - Lucide is bundled locally; its ISC license is included in `assets/LUCIDE-LICENSE.txt`.
 - See `assets/ASSET-NOTES.md` and `research/catalog-sources.json` for image and product provenance.
 
-The enquiry form prepares, copies and downloads an enquiry in the browser. It does not send email or submit information to a server. Connect an approved delivery endpoint before offering online submission.
+## Enquiry email delivery
+
+The contact form posts to the same-origin `/api/enquiry` Worker endpoint. It forwards validated enquiries to **3537213006@qq.com** using FormSubmit. The recipient must click the initial **Activate Form** message in that inbox before delivery works. No mailbox password or API token is stored in this repository.
+
+- The server fixes the destination, source URL and email subject; submitted data cannot add recipients or webhooks.
+- Requests require the configured origin, JSON content type and consent. Fields, products and the 16 KB body limit are checked on the server.
+- A honeypot and a Cloudflare rate limit of five attempts per minute per IP and Cloudflare location reduce automated submissions. Users sharing a network share that allowance.
+- A successful response means the email service accepted the enquiry; it does not prove delivery to the inbox. There are no automatic retries or customer auto-replies.
+- On failure, activation pending or an uncertain result, the form preserves a copy for download and direct email.
+- FormSubmit handles email delivery and retains submissions for 30 days under its [published policy](https://formsubmit.co/documentation). Avoid including passwords or other secrets in enquiries.
+
+Run `npm test` for the endpoint tests and `npm run check:deploy` to validate the Worker bundle. When adding a custom domain, update `PUBLIC_SITE_ORIGIN` in `wrangler.jsonc`, then test the enquiry flow on that domain.

@@ -12,6 +12,11 @@
   const result = document.querySelector("#consultationResult");
   const summary = document.querySelector("#consultationSummary");
   const resultNotice = document.querySelector("#resultNotice");
+  const resultTitle = document.querySelector("#resultTitle");
+  const resultDeliveryStatus = document.querySelector("#resultDeliveryStatus");
+  const exportStatus = document.querySelector("#exportStatus");
+  const submitButton = document.querySelector("#sendEnquiryButton");
+  const submitLabel = document.querySelector("#sendEnquiryLabel");
   const copyButton = document.querySelector("#copyConsultationButton");
   const downloadButton = document.querySelector("#downloadConsultationButton");
   const saveButton = document.querySelector("#saveDraftButton");
@@ -31,7 +36,11 @@
   let generatedText = "";
   let generatedType = "general";
   let generatedDirty = false;
+  let generatedFingerprint = "";
+  let currentResultNotice = "";
   let unknownProduct = false;
+  let sending = false;
+  const submissionOutcomes = new Map();
 
   Object.entries(window.CL_CATEGORIES || {}).filter(([key]) => key !== 'all').forEach(([category,label]) => {
     const group = document.createElement('optgroup'); group.label = label;
@@ -127,12 +136,36 @@
     return Object.fromEntries(draftFields.map((name) => [name, field(name).value.trim()]));
   }
 
+  function requestData() {
+    const data = collectData();
+    if (data.type !== "business") { data.quantity = ""; data.timeline = ""; }
+    else {
+      const quantity = Number(data.quantity);
+      if (Number.isInteger(quantity) && quantity >= 1 && quantity <= 1000000) data.quantity = String(quantity);
+    }
+    return { ...data, consent: field("consent").checked, website: field("website").value.trim() };
+  }
+
+  function fingerprint(data = requestData()) {
+    // Consent and the spam trap are not enquiry contents and cannot bypass duplicate protection.
+    const { consent, website, ...contents } = data;
+    return JSON.stringify(contents);
+  }
+
+  function syncSubmitButton() {
+    const outcome = submissionOutcomes.get(fingerprint());
+    submitButton.disabled = sending || Boolean(outcome);
+    submitLabel.textContent = sending ? "Sending…" : outcome === "accepted" ? "Enquiry submitted" : outcome ? "Check submission status" : "Send enquiry";
+  }
+
   function markChanged() {
+    if (sending) return;
+    syncSubmitButton();
     if (!generatedText) return;
-    generatedDirty = true;
-    resultNotice.textContent = "Details changed. Select “Prepare enquiry” to update this document.";
-    copyButton.disabled = true;
-    downloadButton.disabled = true;
+    generatedDirty = fingerprint() !== generatedFingerprint;
+    resultNotice.textContent = generatedDirty ? "Your form has changed. The copy below contains your previous details. Send the updated enquiry when ready." : currentResultNotice;
+    copyButton.disabled = generatedDirty;
+    downloadButton.disabled = generatedDirty;
   }
 
   function refreshDraftStatus(message) {
@@ -205,7 +238,7 @@
       ["name", "contact", "organization", "usage", "quantity", "message", "consent"].forEach(clearError);
       syncType(); renderProductContext(); updateCounter(); markChanged();
       refreshDraftStatus("Draft restored. Review the details and check the consent box again.");
-      notify("Draft restored. Review the form before preparing your enquiry.");
+      notify("Draft restored. Review the form before sending your enquiry.");
     } catch { draftStatus.textContent = "Unable to read this draft. Your entries are unchanged. Delete the draft and save a new one."; }
   });
   removeButton.addEventListener("click", () => {
@@ -217,10 +250,7 @@
     } catch { draftStatus.textContent = "Unable to delete the draft. Check your browser storage settings."; }
   });
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (!validate()) return;
-    const data = collectData();
+  function prepareSummary(data) {
     const product = getProduct(data.product);
     const lines = ["chenglian Project Enquiry", "━━━━━━━━━━━━━━━━━━━━", `Prepared: ${new Date().toLocaleString("en-GB", { hour12: false, timeZoneName: "short" })}`, `Enquiry type: ${labels[data.type]}`, `Name: ${data.name}`, `Email or phone: ${data.contact}`];
     if (product) lines.push(`Product: ${product.name} (${product.id})`);
@@ -230,19 +260,124 @@
       lines.push(`Estimated quantity: ${data.quantity}`);
       if (data.timeline) lines.push(`Target delivery: ${data.timeline}`);
     }
-    lines.push("", "Requirements:", data.message, "", "This enquiry was prepared locally and has not been sent. Send it to a verified chenglian contact. It is not an order.");
+    lines.push("", "Requirements:", data.message, "", "This document records your enquiry details. It is not an order or proof of email delivery.");
     generatedText = lines.join("\n");
     generatedType = data.type;
     generatedDirty = false;
+    generatedFingerprint = fingerprint(data);
     summary.textContent = generatedText;
     result.hidden = false;
-    resultNotice.textContent = "Check the details, then copy or download the document to send.";
+    exportStatus.textContent = "";
     copyButton.disabled = false;
     downloadButton.disabled = false;
-    notify("Enquiry prepared below. Nothing has been sent.");
-    if (typeof site.refreshIcons === "function") site.refreshIcons();
+  }
+
+  function showResult(state, title, message, deliveryStatus) {
+    result.dataset.state = state;
+    resultTitle.textContent = title;
+    currentResultNotice = message;
+    resultNotice.textContent = message;
+    resultDeliveryStatus.textContent = deliveryStatus;
+    const icon = document.createElement("i");
+    icon.dataset.lucide = state === "accepted" ? "check" : state === "sending" ? "loader-circle" : "info";
+    icon.setAttribute("aria-hidden", "true");
+    result.querySelector(".con-result-icon").replaceChildren(icon);
+    site.refreshIcons?.();
+    notify(`${title}. ${message}`);
+  }
+
+  function focusResult() {
     result.focus({ preventScroll: true });
     result.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  }
+
+  function showUnconfirmed(key) {
+    submissionOutcomes.set(key, "unconfirmed");
+    showResult("unconfirmed", "Submission status unknown", "We could not confirm whether your enquiry was accepted. Your details are preserved below. Contact 3537213006@qq.com to check before sending again.", "No automatic retry was made. Repeating this enquiry could send a duplicate.");
+  }
+
+  function applyServerErrors(errors) {
+    const messages = {
+      type: "Choose an enquiry type.", product: "Select a product from the list or leave it blank.",
+      name: "Enter your name (up to 80 characters).", contact: "Enter a valid email address or a phone number with 7–15 digits.",
+      organization: "Check your company or organization name (up to 160 characters).", usage: "Check your deployment details (up to 240 characters).",
+      quantity: "Enter a whole number between 1 and 1,000,000.", timeline: "Keep the target delivery details within 100 characters.",
+      message: "Describe your requirements in 10–3,000 characters.", consent: "Confirm that you agree to send your details."
+    };
+    const names = Object.keys(errors || {}).filter(name => Object.prototype.hasOwnProperty.call(messages, name));
+    names.forEach(name => {
+      const input = field(name);
+      const error = form.querySelector(`[data-error-for="${name}"]`);
+      input.setCustomValidity(messages[name]);
+      input.setAttribute("aria-invalid", "true");
+      if (error) error.textContent = messages[name];
+    });
+    return names[0];
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (sending) return;
+    const data = requestData();
+    const key = fingerprint(data);
+    if (submissionOutcomes.has(key)) {
+      notify(submissionOutcomes.get(key) === "accepted" ? "This enquiry has already been submitted. Edit the details to send an updated enquiry." : "The status of this enquiry is unknown. Contact 3537213006@qq.com before sending it again.");
+      return;
+    }
+    if (!validate()) return;
+    prepareSummary(data);
+    sending = true;
+    const controlStates = Array.from(form.elements).map(control => [control, control.disabled]);
+    controlStates.forEach(([control]) => { control.disabled = true; });
+    form.setAttribute("aria-busy", "true");
+    syncSubmitButton();
+    showResult("sending", "Sending your enquiry", "Please keep this page open while we request email delivery.", "Awaiting confirmation from the email service.");
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 25000);
+    let errorField;
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        credentials: "same-origin", body: JSON.stringify(data), signal: controller.signal
+      });
+      const body = await response.json().catch(() => null);
+      if (response.status === 202 && body?.ok === true && body.status === "accepted") {
+        submissionOutcomes.set(key, "accepted");
+        const reference = typeof body.reference === "string" && /^[a-zA-Z0-9_-]{1,100}$/.test(body.reference) ? ` Reference: ${body.reference}.` : "";
+        showResult("accepted", "Enquiry submitted", "Your enquiry has been accepted for email delivery to chenglian. Keep the copy below for your records.", `Accepted for email delivery; inbox receipt is not confirmed.${reference} This enquiry is not an order.`);
+      } else if (response.status === 503 && body?.code === "activation_required") {
+        submissionOutcomes.set(key, "activation");
+        showResult("activation", "Email setup pending", "The email service is awaiting activation and may retain your enquiry until setup is complete. Contact 3537213006@qq.com to check its status before sending again.", "Email delivery is not confirmed. Your details are preserved below; no automatic retry was made.");
+      } else if (response.status === 422 && body?.code === "validation_error") {
+        errorField = applyServerErrors(body.errors);
+        showResult("error", "Check your enquiry", "Some details need attention. Review the highlighted fields and send again.", "Your enquiry has not been sent. Your details are preserved below.");
+      } else if (response.status === 429) {
+        const seconds = Number(response.headers.get("Retry-After"));
+        const wait = Number.isInteger(seconds) && seconds > 0 && seconds <= 3600 ? `Wait ${seconds} seconds before trying again.` : "Wait a few minutes before trying again.";
+        showResult("error", "Please wait before sending", `${wait} Your enquiry is preserved below.`, "This attempt was not sent. You can also email 3537213006@qq.com.");
+      } else if (["service_unavailable", "origin_not_allowed", "unsupported_content_type", "payload_too_large", "invalid_json", "invalid_submission"].includes(body?.code)) {
+        const message = body.code === "service_unavailable"
+          ? "Email submission is temporarily unavailable. Try again later, or email 3537213006@qq.com."
+          : body.code === "payload_too_large"
+            ? "Your enquiry exceeds the submission limit. Shorten your requirements and try again, or email 3537213006@qq.com."
+            : "We could not process this submission. Review your details and try again, or email 3537213006@qq.com.";
+        showResult("error", "Enquiry not sent", message, "This attempt was not sent to the email service. Your details are preserved below.");
+      } else if (body?.code === "delivery_failed") {
+        showResult("error", "Email submission failed", "Your enquiry could not be accepted for email delivery. Try again later, or email 3537213006@qq.com.", "Your details are preserved below. Copy or download your enquiry to send by email.");
+      } else {
+        showUnconfirmed(key);
+      }
+    } catch {
+      showUnconfirmed(key);
+    } finally {
+      clearTimeout(timeout);
+      controlStates.forEach(([control, disabled]) => { control.disabled = disabled; });
+      sending = false;
+      form.removeAttribute("aria-busy");
+      syncSubmitButton();
+      if (errorField) field(errorField).focus();
+      else focusResult();
+    }
   });
 
   copyButton.addEventListener("click", async () => {
@@ -250,7 +385,7 @@
     try {
       if (!navigator.clipboard || !window.isSecureContext) throw new Error("Clipboard unavailable");
       await navigator.clipboard.writeText(generatedText);
-      resultNotice.textContent = "Enquiry copied. Send it to your verified chenglian contact.";
+      exportStatus.textContent = "Enquiry copied to your clipboard.";
     } catch {
       const selection = window.getSelection();
       const range = document.createRange();
@@ -258,7 +393,7 @@
       selection.removeAllRanges();
       selection.addRange(range);
       summary.focus();
-      resultNotice.textContent = "Automatic copy is unavailable. Copy the selected text or choose “Download TXT”.";
+      exportStatus.textContent = "Automatic copy is unavailable. Copy the selected text or choose “Download TXT”.";
     }
   });
   downloadButton.addEventListener("click", () => {
@@ -273,6 +408,6 @@
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
-    resultNotice.textContent = "Download started. Send the saved file to your verified chenglian contact.";
+    exportStatus.textContent = "Download started. Keep the file for your records or send it by email if needed.";
   });
 })();

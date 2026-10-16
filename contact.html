@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Prepare a hardware enquiry for chenglian. Specify server, network and storage models, quantities, compatibility needs and delivery requirements." />
+    <meta name="description" content="Send a hardware enquiry to chenglian. Specify server, network and storage models, quantities, compatibility needs and delivery requirements." />
     <meta name="theme-color" content="#090c12" />
     <title>Project Enquiry | chenglian</title>
     <link rel="stylesheet" href="styles.css" />
@@ -30,14 +30,16 @@
             <li><span>03</span><div><h3>Schedule</h3><p>Target delivery dates, budget and any deployment constraints.</p></div></li>
           </ol>
           <a class="con-help-link" href="support.html"><i data-lucide="life-buoy" aria-hidden="true"></i><span><strong>Need technical help?</strong><small>Read our support guidance and FAQs</small></span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-          <div class="con-channel-note"><i data-lucide="info" aria-hidden="true"></i><p>Official phone and email details are not yet listed. Use a chenglian contact you have independently verified.</p></div>
+          <div class="con-channel-note"><i data-lucide="mail" aria-hidden="true"></i><p>Prefer email?<br><a href="mailto:3537213006@qq.com">3537213006@qq.com</a></p></div>
         </aside>
         <div class="con-form-card">
-          <div class="con-form-top"><div><p class="eyebrow">PROJECT ENQUIRY</p><h2 id="formTitle">Prepare your enquiry</h2></div><span class="con-required-note">* Required</span></div>
-          <p class="con-form-lead">Complete the form to review, copy or download your enquiry.</p>
-          <div class="con-local-notice"><i data-lucide="file-text" aria-hidden="true"></i><p>This form prepares a document in your browser. It does not send an enquiry. Send the document to a verified chenglian contact.</p></div>
+          <div class="con-form-top"><div><p class="eyebrow">PROJECT ENQUIRY</p><h2 id="formTitle">Send your enquiry</h2></div><span class="con-required-note">* Required</span></div>
+          <p class="con-form-lead">Send your requirements to chenglian. You can also keep a copy for your records.</p>
+          <div class="con-local-notice"><i data-lucide="mail" aria-hidden="true"></i><p>Your details are sent to chenglian at <a href="mailto:3537213006@qq.com">3537213006@qq.com</a>. Email processing is provided by <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit (privacy policy)</a>.</p></div>
           <div class="con-context" id="consultationContext" hidden></div>
+          <p class="con-status" id="consultationMessage" role="status" aria-live="polite" aria-atomic="true"></p>
           <form id="consultationForm" class="con-form" novalidate tabindex="-1">
+            <div class="con-honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off" maxlength="200" /></label></div>
             <div class="con-fields">
               <label class="con-field"><span>Enquiry type <b>*</b></span><select name="type" required><option value="general">General enquiry</option><option value="product">Product advice</option><option value="business">Procurement</option><option value="technical">Compatibility check</option><option value="support">After-sales support</option></select></label>
               <label class="con-field"><span>Product</span><select name="product"><option value="">Select a product (optional)</option></select></label>
@@ -48,12 +50,11 @@
             </div>
             <fieldset class="con-business" id="businessFields" hidden disabled><legend>Procurement details</legend><div class="con-fields"><label class="con-field"><span>Estimated quantity <b>*</b></span><input name="quantity" type="number" min="1" max="1000000" step="1" inputmode="numeric" placeholder="e.g. 20" aria-describedby="con-error-quantity" /><small class="con-error" id="con-error-quantity" data-error-for="quantity"></small></label><label class="con-field"><span>Target delivery</span><input name="timeline" type="text" maxlength="100" placeholder="e.g. Next month" /></label></div></fieldset>
             <label class="con-field con-message-field"><span>Requirements <b>*</b></span><textarea name="message" rows="5" minlength="10" maxlength="3000" required placeholder="Include models, quantities and technical requirements. Minimum 10 characters." aria-describedby="con-error-message con-message-count"></textarea><span class="con-textarea-foot"><small class="con-error" id="con-error-message" data-error-for="message"></small><small id="con-message-count">0 / 3000</small></span></label>
-            <label class="con-check"><input name="consent" type="checkbox" required aria-describedby="con-error-consent" /><span>I confirm these details may be used for this enquiry. I understand I must send it myself.</span></label><small class="con-error con-consent-error" id="con-error-consent" data-error-for="consent"></small>
-            <div class="con-submit-row"><p><i data-lucide="lock-keyhole" aria-hidden="true"></i>Prepared in your browser</p><button class="button button-primary" type="submit">Prepare enquiry <i data-lucide="arrow-right" aria-hidden="true"></i></button></div>
-            <p class="con-status" id="consultationMessage" role="status" aria-live="polite"></p>
+            <label class="con-check"><input name="consent" type="checkbox" required aria-describedby="con-error-consent" /><span>I agree to send these details to chenglian for a response to this enquiry.</span></label><small class="con-error con-consent-error" id="con-error-consent" data-error-for="consent"></small>
+            <div class="con-submit-row"><p><i data-lucide="lock-keyhole" aria-hidden="true"></i>Your enquiry is not an order</p><button class="button button-primary" id="sendEnquiryButton" type="submit"><span id="sendEnquiryLabel">Send enquiry</span> <i data-lucide="arrow-right" aria-hidden="true"></i></button></div>
             <div class="con-draft"><label class="con-check"><input name="saveDraft" type="checkbox" /><span>I allow this browser to save my draft.</span></label><p>Select “Save draft” to store your contact details in this browser. Avoid shared devices.</p><div class="con-draft-actions"><button type="button" id="saveDraftButton" disabled>Save draft</button><button type="button" id="loadDraftButton" disabled>Restore draft</button><button type="button" id="removeDraftButton" disabled>Delete draft</button></div><p id="draftStatus" role="status" aria-live="polite">No draft saved.</p></div>
           </form>
-          <section class="con-result" id="consultationResult" hidden aria-labelledby="resultTitle" tabindex="-1"><div class="con-result-heading"><span class="con-result-icon"><i data-lucide="check" aria-hidden="true"></i></span><div><h3 id="resultTitle">Review your enquiry</h3><p id="resultNotice">Check the details, then copy or download the document to send.</p></div></div><pre id="consultationSummary" tabindex="0" aria-label="Enquiry contents"></pre><div class="con-result-actions"><button class="button button-dark" type="button" id="copyConsultationButton"><i data-lucide="copy" aria-hidden="true"></i>Copy enquiry</button><button class="button button-outline" type="button" id="downloadConsultationButton"><i data-lucide="download" aria-hidden="true"></i>Download TXT</button><a href="#formTitle" class="text-link">Edit details <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div><p class="con-result-foot">Not sent. This document is an enquiry, not an order.</p></section>
+          <section class="con-result" id="consultationResult" hidden aria-labelledby="resultTitle" tabindex="-1" data-state="ready"><div class="con-result-heading"><span class="con-result-icon"><i data-lucide="file-text" aria-hidden="true"></i></span><div><h3 id="resultTitle">Your enquiry</h3><p id="resultNotice">A copy of your enquiry is available below.</p></div></div><pre id="consultationSummary" tabindex="0" aria-label="Enquiry contents"></pre><div class="con-result-actions"><button class="button button-dark" type="button" id="copyConsultationButton"><i data-lucide="copy" aria-hidden="true"></i>Copy enquiry</button><button class="button button-outline" type="button" id="downloadConsultationButton"><i data-lucide="download" aria-hidden="true"></i>Download TXT</button><a href="#formTitle" class="text-link">Edit details <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div><p class="con-result-foot" id="resultDeliveryStatus">This enquiry is not an order.</p><p class="con-export-status" id="exportStatus" role="status" aria-live="polite" aria-atomic="true"></p></section>
         </div>
       </section>
       <section class="con-bottom container"><span class="eyebrow">PRODUCT CATALOG</span><h2>Still choosing hardware?</h2><a href="products.html" class="text-link">Browse products <i data-lucide="arrow-right" aria-hidden="true"></i></a></section>

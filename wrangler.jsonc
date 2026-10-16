@@ -1,12 +1,23 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "truecore-website",
+  "main": "worker.mjs",
   "compatibility_date": "2026-10-16",
   "build": { "command": "npm run build" },
   "assets": {
+    "binding": "ASSETS",
     "directory": "./dist",
+    "run_worker_first": ["/api/*"],
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "none"
   },
+  "vars": {
+    "PUBLIC_SITE_ORIGIN": "https://truecore-website.3537213006.workers.dev"
+  },
+  "ratelimits": [{
+    "name": "ENQUIRY_RATE_LIMIT",
+    "namespace_id": "2026101601",
+    "simple": { "limit": 5, "period": 60 }
+  }],
   "observability": { "enabled": true }
 }
