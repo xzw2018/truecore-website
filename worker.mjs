@@ -146,11 +146,12 @@ export async function handleEnquiry(request, env, fetchEmail = fetch) {
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
-    // Temporary read-only connectivity probe: GET cannot submit a FormSubmit form.
+    // Temporary connectivity probe uses an invalid recipient and a filled spam trap.
     if (path === '/api/email-health' && request.method === 'GET') {
-      const response = await fetch(DELIVERY_URL, {
-        method: 'GET', redirect: 'manual', signal: AbortSignal.timeout(10000),
-        headers: { Accept: 'application/json', Origin: env.PUBLIC_SITE_ORIGIN, Referer: `${env.PUBLIC_SITE_ORIGIN}/contact` },
+      const response = await fetch('https://formsubmit.co/ajax/not-an-email', {
+        method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(10000),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: env.PUBLIC_SITE_ORIGIN, Referer: `${env.PUBLIC_SITE_ORIGIN}/contact` },
+        body: JSON.stringify({ _honey: 'diagnostic', _url: `${env.PUBLIC_SITE_ORIGIN}/contact` }),
       });
       return json({ status: response.status, contentType: response.headers.get('content-type'), location: response.headers.get('location'), body: (await response.text()).slice(0, 1500) });
     }
